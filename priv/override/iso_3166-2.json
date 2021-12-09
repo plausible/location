@@ -1,0 +1,22 @@
+[
+    {
+      "code": "GB-ENG",
+      "name": "England",
+      "type": "country"
+    },
+    {
+      "code": "GB-NIR",
+      "name": "Northern Ireland",
+      "type": "province"
+    },
+    {
+      "code": "GB-SCT",
+      "name": "Scotland",
+      "type": "country"
+    },
+    {
+      "code": "GB-WLS",
+      "name": "Wales",
+      "type": "country"
+    }
+]
