@@ -54,7 +54,7 @@ defmodule Location.Subdivision do
   end
 
   defp translations_file() do
-    Application.app_dir(:location, "priv/override/iso_3166-2.en-translations.json")
+    Application.app_dir(:location, "priv/iso_3166-2.en-translations.json")
   end
 
   defp override_source_file() do
