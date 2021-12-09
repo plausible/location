@@ -1,6 +1,4 @@
 defmodule Location.Country do
-  @source Application.app_dir(:location, "priv/iso_3166-1.json")
-  @override_source Application.app_dir(:location, "priv/override/iso_3166-1.json")
   @ets_table :countries
 
   defstruct [:alpha_2, :alpha_3, :name, :flag]
@@ -8,14 +6,14 @@ defmodule Location.Country do
   def load(heir) do
     ets = :ets.new(@ets_table, [:named_table, {:heir, heir, []}])
 
-    File.read!(@source)
+    File.read!(source_file())
     |> Jason.decode!()
     |> Map.fetch!("3166-1")
     |> Enum.each(fn entry ->
       :ets.insert(ets, {entry["alpha_2"], to_struct(entry)})
     end)
 
-    File.read!(@override_source)
+    File.read!(override_source_file())
     |> Jason.decode!()
     |> Enum.each(fn entry ->
       :ets.insert(ets, {entry["alpha_2"], to_struct(entry)})
@@ -41,5 +39,13 @@ defmodule Location.Country do
       alpha_2: entry["alpha_2"],
       alpha_3: entry["alpha_3"],
     }
+  end
+
+  defp source_file() do
+    Application.app_dir(:location, "priv/iso_3166-1.json")
+  end
+
+  defp override_source_file() do
+    Application.app_dir(:location, "priv/override/iso_3166-1.json")
   end
 end

@@ -1,7 +1,4 @@
 defmodule Location.Subdivision do
-  @source Application.app_dir(:location, "priv/iso_3166-2.json")
-  @override_source Application.app_dir(:location, "priv/override/iso_3166-2.json")
-  @translations_src Application.app_dir(:location, "priv/iso_3166-2.en-translations.json")
   @ets_table :iso_3166_2
 
   defstruct [:code, :name, :type, :country_code]
@@ -9,9 +6,9 @@ defmodule Location.Subdivision do
   def load(heir) do
     ets = :ets.new(@ets_table, [:named_table, {:heir, heir, []}])
 
-    translations = File.read!(@translations_src) |> Jason.decode!()
+    translations = File.read!(translations_file()) |> Jason.decode!()
 
-    File.read!(@source)
+    File.read!(source_file())
     |> Jason.decode!()
     |> Map.fetch!("3166-2")
     |> Enum.each(fn entry ->
@@ -19,7 +16,7 @@ defmodule Location.Subdivision do
       :ets.insert(ets, {entry["code"], to_struct(entry)})
     end)
 
-    File.read!(@override_source)
+    File.read!(override_source_file())
     |> Jason.decode!()
     |> Enum.each(fn entry ->
       :ets.insert(ets, {entry["code"], to_struct(entry)})
@@ -50,5 +47,17 @@ defmodule Location.Subdivision do
       translation ->
         Map.put(entry, "name", translation)
     end
+  end
+
+  defp source_file() do
+    Application.app_dir(:location, "priv/iso_3166-2.json")
+  end
+
+  defp translations_file() do
+    Application.app_dir(:location, "priv/override/iso_3166-2.en-translations.json")
+  end
+
+  defp override_source_file() do
+    Application.app_dir(:location, "priv/override/iso_3166-2.json")
   end
 end
