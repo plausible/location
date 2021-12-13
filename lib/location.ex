@@ -1,8 +1,11 @@
 defmodule Location do
   require Logger
   defdelegate get_country(alpha_2), to: Location.Country
+  defdelegate search_country(alpha_2), to: Location.Country
   defdelegate get_subdivision(code), to: Location.Subdivision
+  defdelegate search_subdivision(code), to: Location.Subdivision
   defdelegate get_city(code), to: Location.City
+  defdelegate search_city(code), to: Location.City
 
   def load_all do
     me = self()

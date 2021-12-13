@@ -23,6 +23,19 @@ defmodule Location.Subdivision do
     end)
   end
 
+  def search_subdivision(search_phrase) do
+    search_phrase = String.downcase(search_phrase)
+
+    :ets.foldl(fn
+      {_code, entry}, acc ->
+        if String.starts_with?(String.downcase(entry.name), search_phrase) do
+          [entry | acc]
+        else
+          acc
+        end
+    end, [], @ets_table)
+  end
+
   def get_subdivision(code) do
     case :ets.lookup(@ets_table, code) do
       [{_, entry}] -> entry

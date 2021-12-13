@@ -8,24 +8,51 @@ defmodule LocationTest do
     :ok
   end
 
-  test "can look up a country" do
-    country = Location.get_country("EE")
+  describe "country" do
+    test "can look up a country by ISO code" do
+      country = Location.get_country("EE")
 
-    assert country.name == "Estonia"
+      assert country.name == "Estonia"
+    end
+
+    test "can search a country by name, case insensitive" do
+      [match] = Location.search_country("est")
+
+      assert match.alpha_2 == "EE"
+      assert match.name == "Estonia"
+    end
   end
 
-  test "can look up a subdivision" do
-    subdiv = Location.get_subdivision("EE-79")
+  describe "subdivision" do
+    test "can look up a subdivision by ISO code" do
+      subdiv = Location.get_subdivision("EE-79")
 
-    assert subdiv.name == "Tartumaa"
-    assert subdiv.country_code == "EE"
-    assert subdiv.type == "County"
+      assert subdiv.name == "Tartumaa"
+      assert subdiv.country_code == "EE"
+      assert subdiv.type == "County"
+    end
+
+    test "can search a subdivision by name, case insensitive" do
+      [match] = Location.search_subdivision("tartum")
+
+      assert match.code == "EE-79"
+      assert match.name == "Tartumaa"
+    end
   end
 
-  test "can look up a city" do
-    city = Location.get_city(588335)
+  describe "city" do
+    test "can look up a city" do
+      city = Location.get_city(588335)
 
-    assert city.name == "Tartu"
-    assert city.country_code == "EE"
+      assert city.name == "Tartu"
+      assert city.country_code == "EE"
+    end
+
+    test "can search a city by name, case insensitive" do
+      [match] = Location.search_city("otepä")
+
+      assert match.id == 589782
+      assert match.name == "Otepää"
+    end
   end
 end
