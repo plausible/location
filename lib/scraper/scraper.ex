@@ -56,5 +56,6 @@ defmodule Location.Scraper do
     Floki.text(text)
     |> String.trim()
     |> String.trim("[a]")
+    |> String.replace(~r/\[note \d\]$/, "") # Sometimes the entry contains something like "Region name[note 3]"
   end
 end
