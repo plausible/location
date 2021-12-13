@@ -18,8 +18,6 @@ defmodule Location.Scraper do
 
   defp scrape_country(%Location.Country{alpha_2: code}) when code in @countries_to_skip, do: nil
   defp scrape_country(country) do
-    IO.puts("Fetching data for " <> country.name)
-
     url = @subdivision_base_url <> country.alpha_2
     response = HTTPoison.get!(url)
     {:ok, document} = Floki.parse_document(response.body)
@@ -30,13 +28,22 @@ defmodule Location.Scraper do
 
     english_name_column = case List.first(rows) do
       {"tr", _attrs, cells} ->
-        Enum.find_index(cells, fn cell -> String.starts_with?(String.downcase(cell_text(cell)), "subdivision name (en)") end)
+        Enum.find_index(cells, fn cell ->
+          text = String.downcase(cell_text(cell))
+          String.starts_with?(text, "subdivision name (en)")
+          || String.starts_with?(text, "subdivision name (sv)")
+        end)
       _ -> nil
     end
 
     if english_name_column do
+      IO.puts("Scraping " <> country.name)
+
       Enum.drop(rows, 1)
       |> Enum.map(fn row -> scrape_row(row, english_name_column) end)
+    else
+      IO.puts("Skipping " <> country.name)
+      []
     end
   end
 
