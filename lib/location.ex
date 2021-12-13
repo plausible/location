@@ -16,7 +16,7 @@ defmodule Location do
       Task.async(fn -> Location.Country.load(me) end),
       Task.async(fn -> Location.Subdivision.load(me) end),
       Task.async(fn -> Location.City.load(me) end)
-    ] |> Enum.map(fn task -> Task.await(task, 15_000) end)
+    ] |> Enum.map(fn task -> Task.await(task, 30_000) end)
 
     Logger.debug("Location databases loaded")
   end
