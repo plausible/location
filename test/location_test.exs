@@ -16,7 +16,7 @@ defmodule LocationTest do
     end
 
     test "can search a country by name, case insensitive" do
-      [match] = Location.search_country("est")
+      [match] = Location.search_country("eston")
 
       assert match.alpha_2 == "EE"
       assert match.name == "Estonia"

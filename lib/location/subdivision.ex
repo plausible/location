@@ -28,7 +28,7 @@ defmodule Location.Subdivision do
 
     :ets.foldl(fn
       {_code, entry}, acc ->
-        if String.starts_with?(String.downcase(entry.name), search_phrase) do
+        if String.contains?(String.downcase(entry.name), search_phrase) do
           [entry | acc]
         else
           acc
