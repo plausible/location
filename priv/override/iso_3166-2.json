@@ -18,5 +18,95 @@
       "code": "GB-WLS",
       "name": "Wales",
       "type": "country"
+    },
+    {
+      "code": "HK-HCW",
+      "name": "Central and Western Hong Kong Island",
+      "type": "district"
+    },
+    {
+      "code": "HK-HEA",
+      "name": "Eastern Hong Kong Island",
+      "type": "district"
+    },
+    {
+      "code": "HK-HSO",
+      "name": "Southern Hong Kong Island",
+      "type": "district"
+    },
+    {
+      "code": "HK-HWC",
+      "name": "Wan Chai Hong Kong Island",
+      "type": "district"
+    },
+    {
+      "code": "HK-KKC",
+      "name": "Kowloon City Kowloon",
+      "type": "district"
+    },
+    {
+      "code": "HK-KKT",
+      "name": "Kwun Tong Kowloon",
+      "type": "district"
+    },
+    {
+      "code": "HK-KSS",
+      "name": "Sham Shui Po Kowloon",
+      "type": "district"
+    },
+    {
+      "code": "HK-KWT",
+      "name": "Wong Tai Sin Kowloon",
+      "type": "district"
+    },
+    {
+      "code": "HK-KYT",
+      "name": "Yau Tsim Mong Kowloon",
+      "type": "district"
+    },
+    {
+      "code": "HK-NIS",
+      "name": "Islands New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NKT",
+      "name": "Kwai Tsing New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NNO",
+      "name": "North New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NSK",
+      "name": "Sai Kung New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NST",
+      "name": "Sha Tin New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NTM",
+      "name": "Tuen Mun New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NTP",
+      "name": "Tai Po New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NTW",
+      "name": "Tsuen Wan New Territories",
+      "type": "district"
+    },
+    {
+      "code": "HK-NYL",
+      "name": "Yuen Long New Territories",
+      "type": "district"
     }
 ]
