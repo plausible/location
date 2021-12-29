@@ -8,8 +8,8 @@ defmodule Mix.Tasks.UpdateGeonameData do
   The data source allCountries.txt clocks in at 1.5GB. Expect this to take a while.
   """
   def run(_) do
-    System.cmd("wget", [@allcountries_src, "-O", "/tmp/allCountries.zip"])
-    System.cmd("unzip", ["/tmp/allCountries.zip", "-d", "/tmp"])
+    #System.cmd("wget", [@allcountries_src, "-O", "/tmp/allCountries.zip"])
+    #System.cmd("unzip", ["/tmp/allCountries.zip", "-d", "/tmp"])
 
     process_geonames_file("/tmp/allCountries.txt")
   end
