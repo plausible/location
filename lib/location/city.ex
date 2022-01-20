@@ -11,7 +11,7 @@ defmodule Location.City do
     |> Stream.map(&String.split(&1, tab))
     |> Enum.each(fn [id, name, country_code] ->
       id = String.to_integer(id)
-      :ets.insert(ets, {id, {name, String.strip(country_code)}})
+      :ets.insert(ets, {id, {name, String.trim(country_code)}})
     end)
   end
 

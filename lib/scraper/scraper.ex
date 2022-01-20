@@ -2,7 +2,10 @@ defmodule Location.Scraper do
   @base_url "https://en.wikipedia.org"
   @subdivision_base_url @base_url <> "/wiki/ISO_3166-2:"
   @translations_dest Application.app_dir(:location, "/priv/iso_3166-2.en-translations.json")
-  @countries_to_skip ["EE"] # For estonia the local names are better than English ones
+  @countries_to_skip [
+    "EE",  # For Estonia the local names are better than English ones
+    "JP" # Source data from salsa-debian already has english translations where applicable
+  ]
 
   def scrape() do
     countries = Location.Country.all()
