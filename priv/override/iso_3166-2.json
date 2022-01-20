@@ -138,5 +138,25 @@
       "code": "IL-JM",
       "name": "Jerusalem",
       "type": "district"
+    },
+    {
+      "code": "MP-S",
+      "name": "Saipan",
+      "type": "municipality"
+    },
+    {
+      "code": "MP-T",
+      "name": "Tinian",
+      "type": "municipality"
+    },
+    {
+      "code": "MP-N",
+      "name": "Northern Islands",
+      "type": "municipality"
+    },
+    {
+      "code": "MP-R",
+      "name": "Rota",
+      "type": "municipality"
     }
 ]
