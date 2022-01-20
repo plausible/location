@@ -5,7 +5,6 @@ defmodule Location do
   defdelegate get_subdivision(code), to: Location.Subdivision
   defdelegate search_subdivision(code), to: Location.Subdivision
   defdelegate get_city(code), to: Location.City
-  defdelegate search_city(code), to: Location.City
 
   def load_all do
     me = self()

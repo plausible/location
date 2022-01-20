@@ -47,12 +47,5 @@ defmodule LocationTest do
       assert city.name == "Tartu"
       assert city.country_code == "EE"
     end
-
-    test "can search a city by name, case insensitive" do
-      [match] = Location.search_city("otepä")
-
-      assert match.id == 589782
-      assert match.name == "Otepää"
-    end
   end
 end

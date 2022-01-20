@@ -108,5 +108,35 @@
       "code": "HK-NYL",
       "name": "Yuen Long New Territories",
       "type": "district"
+    },
+    {
+      "code": "IL-D",
+      "name": "Southern",
+      "type": "district"
+    },
+    {
+      "code": "IL-M",
+      "name": "Central",
+      "type": "district"
+    },
+    {
+      "code": "IL-Z",
+      "name": "Northern",
+      "type": "district"
+    },
+    {
+      "code": "IL-HA",
+      "name": "Haifa",
+      "type": "district"
+    },
+    {
+      "code": "IL-TA",
+      "name": "Tel Aviv",
+      "type": "district"
+    },
+    {
+      "code": "IL-JM",
+      "name": "Jerusalem",
+      "type": "district"
     }
 ]
