@@ -38,7 +38,7 @@ defmodule Location.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, "~> 1.2.2"},
+      {:jason, "~> 1.3"},
       {:floki, "~> 0.31.0", only: [:dev, :test]},
       {:httpoison, "~> 1.8", only: [:dev, :test]},
       {:flow, "~> 1.0", only: [:dev, :test]}
