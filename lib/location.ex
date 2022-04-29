@@ -6,7 +6,7 @@ defmodule Location do
   defdelegate search_subdivision(code), to: Location.Subdivision
   defdelegate get_city(code), to: Location.City
 
-  def load_all do
+  def load_all(timeout \\ 30_000) do
     me = self()
 
     Logger.debug("Loading location databases...")
@@ -15,7 +15,7 @@ defmodule Location do
       Task.async(fn -> Location.Country.load(me) end),
       Task.async(fn -> Location.Subdivision.load(me) end),
       Task.async(fn -> Location.City.load(me) end)
-    ] |> Enum.map(fn task -> Task.await(task, 30_000) end)
+    ] |> Task.await_many(timeout)
 
     Logger.debug("Location databases loaded")
   end
