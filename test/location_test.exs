@@ -42,10 +42,31 @@ defmodule LocationTest do
 
   describe "city" do
     test "can look up a city" do
-      city = Location.get_city(588335)
+      city = Location.get_city(588_335)
 
       assert city.name == "Tartu"
       assert city.country_code == "EE"
+    end
+
+    test "can reverse lookup a city by name and country" do
+      city = Location.City.get_city("Curitiba", "BR")
+
+      assert city.country_code == "BR"
+      assert city.name == "Curitiba"
+      assert city.id == 3_464_975
+    end
+
+    test "returns nil when city name doesn't match country" do
+      city = Location.get_city("Curitiba", "EE")
+      assert is_nil(city)
+    end
+
+    test "returns first match when country has multiple cities with the same name" do
+      city = Location.get_city("Springfield", "AU")
+
+      assert city.country_code == "AU"
+      assert city.id == 8_349_432
+      assert city.name == "Springfield"
     end
   end
 end
