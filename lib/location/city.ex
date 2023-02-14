@@ -6,7 +6,13 @@ defmodule Location.City do
 
   def load(heir) do
     :ets.new(@ets_table, [:named_table, :compressed, {:heir, heir, []}])
-    :ets.new(@ets_table_by_label, [:named_table, :compressed, {:heir, heir, []}])
+
+    :ets.new(@ets_table_by_label, [
+      :named_table,
+      :ordered_set,
+      {:read_concurrency, true},
+      {:heir, heir, []}
+    ])
 
     tab = :binary.compile_pattern("\t")
 
