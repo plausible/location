@@ -3,8 +3,8 @@ defmodule Location.Subdivision do
 
   defstruct [:code, :name, :type, :country_code]
 
-  def load(heir) do
-    ets = :ets.new(@ets_table, [:named_table, {:heir, heir, []}])
+  def load() do
+    ets = :ets.new(@ets_table, [:named_table])
 
     translations = File.read!(translations_file()) |> Jason.decode!()
 
@@ -26,14 +26,18 @@ defmodule Location.Subdivision do
   def search_subdivision(search_phrase) do
     search_phrase = String.downcase(search_phrase)
 
-    :ets.foldl(fn
-      {_code, entry}, acc ->
-        if String.contains?(String.downcase(entry.name), search_phrase) do
-          [entry | acc]
-        else
-          acc
-        end
-    end, [], @ets_table)
+    :ets.foldl(
+      fn
+        {_code, entry}, acc ->
+          if String.contains?(String.downcase(entry.name), search_phrase) do
+            [entry | acc]
+          else
+            acc
+          end
+      end,
+      [],
+      @ets_table
+    )
   end
 
   def get_subdivision(code) do
@@ -44,7 +48,7 @@ defmodule Location.Subdivision do
   end
 
   defp to_struct(entry) do
-    country_code = entry["code"] |> String.split("-") |> List.first
+    country_code = entry["code"] |> String.split("-") |> List.first()
 
     %__MODULE__{
       code: entry["code"],
@@ -56,7 +60,9 @@ defmodule Location.Subdivision do
 
   defp translate_entry(translations, entry) do
     case Map.get(translations, entry["code"]) do
-      nil -> entry
+      nil ->
+        entry
+
       translation ->
         Map.put(entry, "name", translation)
     end

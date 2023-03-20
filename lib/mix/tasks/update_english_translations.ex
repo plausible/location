@@ -3,7 +3,7 @@ defmodule Mix.Tasks.UpdateEnglishTranslations do
 
   def run(_) do
     HTTPoison.start()
-    Location.Country.load(self())
+    Location.Country.load()
     Location.Scraper.scrape()
   end
 end
