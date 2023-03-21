@@ -1,5 +1,5 @@
 defmodule Location.City do
-  @ets_table :geonames
+  @ets_table __MODULE__
 
   defstruct [:id, :name, :country_code]
 
@@ -16,20 +16,23 @@ defmodule Location.City do
     source_file()
     |> File.stream!()
     |> Stream.chunk_every(15_000)
-    |> Task.async_stream(fn chunk ->
-      chunk
-      |> LocationCSV.parse_stream()
-      |> Stream.map(fn [id, name, country_code] ->
-        id = String.to_integer(id)
-        country_code = String.trim(country_code)
+    |> Task.async_stream(
+      fn chunk ->
+        chunk
+        |> LocationCSV.parse_stream()
+        |> Stream.map(fn [id, name, country_code] ->
+          id = String.to_integer(id)
+          country_code = String.trim(country_code)
 
-        {id, {name, country_code}}
-      end)
-      |> Stream.each(fn chunk ->
-        :ets.insert(@ets_table, chunk)
-      end)
-      |> Stream.run()
-    end)
+          {id, {name, country_code}}
+        end)
+        |> Stream.each(fn chunk ->
+          :ets.insert(@ets_table, chunk)
+        end)
+        |> Stream.run()
+      end,
+      timeout: :infinity
+    )
     |> Stream.run()
   end
 
