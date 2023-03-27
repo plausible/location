@@ -1,16 +1,30 @@
 defmodule Location.City do
-  @ets_table __MODULE__
+  @ets_table_by_id __MODULE__
+  @ets_table_by_label Module.concat(__MODULE__, ByLabel)
 
   defstruct [:id, :name, :country_code]
 
   def load() do
-    @ets_table =
-      :ets.new(@ets_table, [
+    @ets_table_by_id =
+      :ets.new(@ets_table_by_id, [
+        :set,
         :named_table,
         :public,
         :compressed,
         {:write_concurrency, true},
-        {:read_concurrency, true}
+        {:read_concurrency, true},
+        {:decentralized_counters, false}
+      ])
+
+    @ets_table_by_label =
+      :ets.new(@ets_table_by_label, [
+        :set,
+        :named_table,
+        :public,
+        :compressed,
+        {:write_concurrency, true},
+        {:read_concurrency, true},
+        {:decentralized_counters, false}
       ])
 
     source_file()
@@ -20,14 +34,12 @@ defmodule Location.City do
       fn chunk ->
         chunk
         |> LocationCSV.parse_stream()
-        |> Stream.map(fn [id, name, country_code] ->
+        |> Stream.each(fn [id, name, country_code] ->
           id = String.to_integer(id)
           country_code = String.trim(country_code)
 
-          {id, {name, country_code}}
-        end)
-        |> Stream.each(fn chunk ->
-          :ets.insert(@ets_table, chunk)
+          true = :ets.insert(@ets_table_by_id, {id, {name, country_code}})
+          true = :ets.insert(@ets_table_by_label, {{name, country_code}, id})
         end)
         |> Stream.run()
       end,
@@ -41,7 +53,7 @@ defmodule Location.City do
   """
   @spec get_city(integer()) :: %__MODULE__{} | nil
   def get_city(id) do
-    case :ets.lookup(@ets_table, id) do
+    case :ets.lookup(@ets_table_by_id, id) do
       [{id, {name, country_code}}] -> to_struct(id, name, country_code)
       _ -> nil
     end
@@ -55,13 +67,8 @@ defmodule Location.City do
   """
   @spec get_city(String.t(), String.t()) :: %__MODULE__{} | nil
   def get_city(name, country_code) do
-    matchspec = [
-      {{:"$1", {:"$2", :"$3"}}, [{:andalso, {:==, :"$2", name}, {:==, :"$3", country_code}}],
-       [:"$1"]}
-    ]
-
-    case :ets.select(@ets_table, matchspec, 1) do
-      {[id], _} -> to_struct(id, name, country_code)
+    case :ets.lookup(@ets_table_by_label, {name, country_code}) do
+      [{{name, country_code}, id}] -> to_struct(id, name, country_code)
       _ -> nil
     end
   end
