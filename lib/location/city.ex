@@ -1,30 +1,39 @@
 defmodule Location.City do
-  @ets_table :geonames
-  @ets_table_by_label :geonames_by_label
+  @ets_table __MODULE__
 
   defstruct [:id, :name, :country_code]
 
-  def load(heir) do
-    :ets.new(@ets_table, [:named_table, :compressed, {:heir, heir, []}])
+  def load() do
+    @ets_table =
+      :ets.new(@ets_table, [
+        :named_table,
+        :public,
+        :compressed,
+        {:write_concurrency, true},
+        {:read_concurrency, true}
+      ])
 
-    :ets.new(@ets_table_by_label, [
-      :named_table,
-      :ordered_set,
-      {:read_concurrency, true},
-      {:heir, heir, []}
-    ])
+    source_file()
+    |> File.stream!()
+    |> Stream.chunk_every(15_000)
+    |> Task.async_stream(
+      fn chunk ->
+        chunk
+        |> LocationCSV.parse_stream()
+        |> Stream.map(fn [id, name, country_code] ->
+          id = String.to_integer(id)
+          country_code = String.trim(country_code)
 
-    tab = :binary.compile_pattern("\t")
-
-    File.stream!(source_file())
-    |> Stream.map(&String.split(&1, tab))
-    |> Enum.each(fn [id, name, country_code] ->
-      id = String.to_integer(id)
-      country_code = String.trim(country_code)
-
-      :ets.insert(@ets_table, {id, {name, country_code}})
-      :ets.insert(@ets_table_by_label, {{name, country_code}, id})
-    end)
+          {id, {name, country_code}}
+        end)
+        |> Stream.each(fn chunk ->
+          :ets.insert(@ets_table, chunk)
+        end)
+        |> Stream.run()
+      end,
+      timeout: :infinity
+    )
+    |> Stream.run()
   end
 
   @doc """
@@ -46,8 +55,13 @@ defmodule Location.City do
   """
   @spec get_city(String.t(), String.t()) :: %__MODULE__{} | nil
   def get_city(name, country_code) do
-    case :ets.lookup(@ets_table_by_label, {name, country_code}) do
-      [{{name, country_code}, id}] -> to_struct(id, name, country_code)
+    matchspec = [
+      {{:"$1", {:"$2", :"$3"}}, [{:andalso, {:==, :"$2", name}, {:==, :"$3", country_code}}],
+       [:"$1"]}
+    ]
+
+    case :ets.select(@ets_table, matchspec, 1) do
+      {[id], _} -> to_struct(id, name, country_code)
       _ -> nil
     end
   end

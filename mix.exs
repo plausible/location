@@ -39,6 +39,7 @@ defmodule Location.MixProject do
   defp deps do
     [
       {:jason, "~> 1.3"},
+      {:nimble_csv, "~> 1.1"},
       {:floki, "~> 0.31.0", only: [:dev, :test]},
       {:httpoison, "~> 1.8", only: [:dev, :test]},
       {:flow, "~> 1.0", only: [:dev, :test]}

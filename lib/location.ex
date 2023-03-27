@@ -1,3 +1,5 @@
+NimbleCSV.define(LocationCSV, separator: "\t", escape: "\~")
+
 defmodule Location do
   require Logger
   defdelegate get_country(alpha_2), to: Location.Country
@@ -7,18 +9,23 @@ defmodule Location do
   defdelegate get_city(code), to: Location.City
   defdelegate get_city(city_name, country_code), to: Location.City
 
-  def load_all(timeout \\ 30_000) do
-    me = self()
-
+  def load_all() do
     Logger.debug("Loading location databases...")
 
-    [
-      Task.async(fn -> Location.Country.load(me) end),
-      Task.async(fn -> Location.Subdivision.load(me) end),
-      Task.async(fn -> Location.City.load(me) end)
-    ]
-    |> Task.await_many(timeout)
+    :ok = load(Location.Country)
+    :ok = load(Location.Subdivision)
+    :ok = load(Location.City)
+  end
 
-    Logger.debug("Location databases loaded")
+  defp load(module) do
+    {t, _result} =
+      :timer.tc(fn ->
+        module.load()
+      end)
+
+    time = t / 1_000_000
+
+    Logger.debug("Loading location database #{inspect(module)} took: #{time}s")
+    :ok
   end
 end
