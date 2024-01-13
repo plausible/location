@@ -1,5 +1,6 @@
 defmodule Location.Scraper do
   @base_url "https://en.wikipedia.org"
+  @postal_code_url "https://download.geonames.org/export/zip/"
   @subdivision_base_url @base_url <> "/wiki/ISO_3166-2:"
   @translations_dest Application.app_dir(:location, "/priv/iso_3166-2.en-translations.json")
   @countries_to_skip [
@@ -79,5 +80,19 @@ defmodule Location.Scraper do
     |> String.trim("[a]")
     # Sometimes the entry contains something like "Region name[note 3]"
     |> String.replace(~r/\[note \d\]$/, "")
+  end
+
+  def scrape_postal_files() do
+    response = HTTPoison.get!(@postal_code_url)
+    {:ok, document} = Floki.parse_document(response.body)
+
+    result =
+      Floki.find(document, "pre")
+
+    Enum.map(result, fn x ->
+      [{_, [{_, href}], [name]}] = Floki.find(x, "a")
+      String.replace(name, ".zip", "")
+    end)
+    |> Enum.join(", ")
   end
 end
