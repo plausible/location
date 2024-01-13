@@ -69,4 +69,12 @@ defmodule LocationTest do
       assert city.name == "Springfield"
     end
   end
+
+  describe "postal code" do
+    test "can look up postal codes for a city" do
+      codes = Location.get_postal_codes("US", "AZ", "Tucson")
+
+      assert Enum.count(codes) > 0
+    end
+  end
 end
