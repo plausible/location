@@ -1,17 +1,26 @@
 defmodule Mix.Tasks.UpdateGeonameData do
   use Mix.Task
 
-  @allcountries_src "https://download.geonames.org/export/dump/allCountries.zip"
-  @allcountries_dest Application.app_dir(:location, "/priv/geonames.csv")
+  @destination_filename Location.PostalCode.source_file()
 
   @doc """
-  The data source allCountries.txt clocks in at 1.5GB. Expect this to take a while.
+  The data source clocks in at 1.5GB. Expect this to take a while.
   """
-  def run(_) do
-    # System.cmd("wget", [@allcountries_src, "-O", "/tmp/allCountries.zip"])
-    # System.cmd("unzip", ["/tmp/allCountries.zip", "-d", "/tmp"])
 
-    process_geonames_file("/tmp/allCountries.txt")
+  def run(args) do
+    {options, _, _} =
+      OptionParser.parse(["--source", "allCountries"], strict: [source: :string])
+
+    Keyword.get(options, :source)
+    |> main()
+  end
+
+  def main(name) do
+    #    src = "https://download.geonames.org/export/dump/#{name}.zip"
+    #    System.cmd("wget", [src, "-O", "/tmp/#{name}.zip"])
+    #    System.cmd("unzip", ["/tmp/#{name}.zip", "-d", "/tmp"])
+
+    process_geonames_file("/tmp/#{name}.txt")
   end
 
   defp process_geonames_file(filename) do
@@ -27,9 +36,9 @@ defmodule Mix.Tasks.UpdateGeonameData do
       |> Flow.reduce(fn -> [] end, &reduce_chunk/2)
       |> Enum.into([])
 
-    IO.puts("Writing result to #{@allcountries_dest}")
+    IO.puts("Writing result to #{@destination_filename}")
 
-    File.write!(@allcountries_dest, Enum.join(result, "\n"))
+    File.write!(@destination_filename, Enum.join(result, "\n"))
   end
 
   defp reduce_chunk(row, result) do

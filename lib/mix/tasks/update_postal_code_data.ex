@@ -1,17 +1,31 @@
 defmodule Mix.Tasks.UpdatePostalCodeData do
   use Mix.Task
 
-  @allcountries_src "https://download.geonames.org/export/zip/allCountries.zip"
-  @allcountries_dest Application.app_dir(:location, "/priv/postal_codes.csv")
+  @destination_filename Location.PostalCode.source_file()
 
   @doc """
-  The data source allCountries.zip clocks in at 16mb. Expect this to take a while.
+  The data source clocks in at 16mb. Expect this to take a while.
+  The option --source will download and parse different datasets ie. AZ (https://download.geonames.org/export/zip/AZ.zip) in order to keep the set small
   """
-  def run(_) do
-    System.cmd("wget", [@allcountries_src, "-O", "/tmp/allCountries.zip"])
-    System.cmd("unzip", ["/tmp/allCountries.zip", "-d", "/tmp"])
 
-    process_file("/tmp/allCountries.txt")
+  def run(args) do
+    {options, _, _} =
+      OptionParser.parse(["--source", "allCountries"], strict: [source: :string])
+
+    Keyword.get(options, :source)
+    |> main()
+  end
+
+  @doc """
+  Fetch and Prepare a Postal Code Export
+
+  """
+  def main(name) do
+    src = "https://download.geonames.org/export/zip/#{name}.zip"
+    System.cmd("wget", [src, "-O", "/tmp/#{name}.zip"])
+    System.cmd("unzip", ["/tmp/#{name}.zip", "-d", "/tmp"])
+
+    process_file("/tmp/#{name}.txt")
   end
 
   defp process_file(filename) do
@@ -26,8 +40,8 @@ defmodule Mix.Tasks.UpdatePostalCodeData do
       |> Flow.partition()
       |> Enum.into([])
 
-    IO.puts("Writing result to #{@allcountries_dest}")
+    IO.puts("Writing result to #{@destination_filename}")
 
-    File.write!(@allcountries_dest, Enum.join(result, "\n"))
+    File.write!(@destination_filename, Enum.join(result, "\n"))
   end
 end

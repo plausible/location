@@ -100,7 +100,8 @@ defmodule Location.PostalCode do
   end
 
   defp source_file() do
-    Application.app_dir(:location, "priv/postal_codes.csv")
+    default = Application.app_dir(:location, "/priv/postal_codes.csv")
+    Application.get_env(:location, :postal_codes_source_file, default)
   end
 
   defp to_struct(postal_code, country_code, state_code, city_name, latitude, longitude) do
