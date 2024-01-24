@@ -1,7 +1,8 @@
 defmodule Mix.Tasks.UpdateGeonameData do
   use Mix.Task
 
-  @destination_filename Location.PostalCode.source_file()
+  default = Application.app_dir(:location, "/priv/postal_codes.csv")
+  @destination_filename Application.get_env(:location, :postal_codes_source_file, default)
 
   @doc """
   The data source clocks in at 1.5GB. Expect this to take a while.

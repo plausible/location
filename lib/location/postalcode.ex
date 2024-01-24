@@ -99,7 +99,7 @@ defmodule Location.PostalCode do
     end
   end
 
-  def source_file() do
+  defp source_file() do
     default = Application.app_dir(:location, "/priv/postal_codes.csv")
     Application.get_env(:location, :postal_codes_source_file, default)
   end
