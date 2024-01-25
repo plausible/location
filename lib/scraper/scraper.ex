@@ -1,4 +1,6 @@
 defmodule Location.Scraper do
+  use Tesla
+
   @base_url "https://en.wikipedia.org"
   @postal_code_url "https://download.geonames.org/export/zip/"
   @subdivision_base_url @base_url <> "/wiki/ISO_3166-2:"
@@ -27,7 +29,7 @@ defmodule Location.Scraper do
 
   defp scrape_country(country) do
     url = @subdivision_base_url <> country.alpha_2
-    response = HTTPoison.get!(url)
+    response = get!(url)
     {:ok, document} = Floki.parse_document(response.body)
 
     rows =
@@ -83,7 +85,7 @@ defmodule Location.Scraper do
   end
 
   def scrape_postal_files() do
-    response = HTTPoison.get!(@postal_code_url)
+    response = get!(@postal_code_url)
     {:ok, document} = Floki.parse_document(response.body)
 
     result =
