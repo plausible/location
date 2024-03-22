@@ -20,7 +20,7 @@ defmodule Location do
     :ok = load(Location.PostalCode)
   end
 
-  defp load(module) do
+  def load(module) do
     {t, _result} =
       :timer.tc(fn ->
         module.load()
