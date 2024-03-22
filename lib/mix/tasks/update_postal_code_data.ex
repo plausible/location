@@ -1,11 +1,12 @@
-defmodule Mix.Tasks.UpdateGeonameData do
+defmodule Mix.Tasks.UpdatePostalCodeData do
   use Mix.Task
 
   default = Application.app_dir(:location, "/priv/postal_codes.csv")
   @destination_filename Application.get_env(:location, :postal_codes_source_file, default)
 
   @doc """
-  The data source clocks in at 1.5GB. Expect this to take a while.
+  The data source clocks in at 16mb. Expect this to take a while.
+  The option --source will download and parse different datasets ie. AZ (https://download.geonames.org/export/zip/AZ.zip) in order to keep the set small
   """
 
   def run(args) do
@@ -33,15 +34,19 @@ defmodule Mix.Tasks.UpdateGeonameData do
     end
   end
 
-  def main(name, append \\ false) do
-    #    src = "https://download.geonames.org/export/dump/#{name}.zip"
-    #    System.cmd("wget", [src, "-O", "/tmp/#{name}.zip"])
-    #    System.cmd("unzip", ["/tmp/#{name}.zip", "-d", "/tmp"])
+  @doc """
+  Fetch and Prepare a Postal Code Export
 
-    process_geonames_file("/tmp/#{name}.txt", append)
+  """
+  def main(name, append \\ false) do
+    src = "https://download.geonames.org/export/zip/#{name}.zip"
+    System.cmd("wget", [src, "-O", "/tmp/#{name}.zip"])
+    System.cmd("unzip", ["/tmp/#{name}.zip", "-d", "/tmp"])
+
+    process_file("/tmp/#{name}.txt", append)
   end
 
-  defp process_geonames_file(filename, append \\ false) do
+  defp process_file(filename, append) do
     # BINARY
     tab = :binary.compile_pattern("\t")
 
@@ -51,7 +56,6 @@ defmodule Mix.Tasks.UpdateGeonameData do
       |> Flow.from_enumerable()
       |> Flow.map(&String.split(&1, tab))
       |> Flow.partition()
-      |> Flow.reduce(fn -> [] end, &reduce_chunk/2)
       |> Enum.into([])
 
     IO.puts("Writing result to #{@destination_filename}")
@@ -59,19 +63,6 @@ defmodule Mix.Tasks.UpdateGeonameData do
     case append do
       false -> File.write!(@destination_filename, Enum.join(result, "\n"))
       true -> File.write!(@destination_filename, Enum.join(result, "\n"), :append)
-    end
-  end
-
-  defp reduce_chunk(row, result) do
-    case row do
-      # feature classes defined here: http://download.geonames.org/export/dump/
-      [geoname_id, name, _, _, _, _, feature_class, _, country_code | _rest]
-      when feature_class in ["P", "A"] ->
-        row = geoname_id <> "\t" <> name <> "\t" <> country_code
-        [row | result]
-
-      _ ->
-        result
     end
   end
 end

@@ -1,6 +1,6 @@
 # Location
 
-Elixir library for accessing ISO3166-1 (country) and ISO3166-2 (subdivision) data as well as geoname data for cities. Source data comes from the upstream [debian iso-codes](https://salsa.debian.org/iso-codes-team/iso-codes) package and the [Geonames](http://www.geonames.org/) project.
+Elixir library for accessing ISO3166-1 (country) and ISO3166-2 (subdivision) data as well as geoname data for cities and postal code data. Source data comes from the upstream [debian iso-codes](https://salsa.debian.org/iso-codes-team/iso-codes) package and the [Geonames](http://www.geonames.org/) project.
 
 
 
@@ -18,5 +18,11 @@ We also add some data manually that is missing from upstream. Overrides can be f
 
 ### Cities
 
-The data for cities comes from the [geonames](http://www.geonames.org/) project. This project has scripts to downlaod the main `allCountries.txt` file. It is then processed to make it smaller
-(from 1.3GB to about 130MB). Still, the resulting file is quite large so we also provide a city database based on the smaller `cities500.txt` file.
+The data for cities comes from the [geonames](http://www.geonames.org/) project. This project has scripts to download the main `allCountries.txt` file or individual country files. If allCountries is chosen is then processed to make it smaller
+(from 1.3GB to about 130MB). Still, the resulting file is quite large so we also provide a city database based on the smaller `cities500.txt` file or one choose the --source option.
+
+### Postal Codes
+The data for postal codes comes from the [geonames](http://www.geonames.org/) project. This project has scripts to download all or individual postal code files via the --source option.
+
+#### Postal Code Helpers
+Postal codes can be downloaded 
