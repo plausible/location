@@ -43,7 +43,8 @@ defmodule Location.MixProject do
       {:floki, "~> 0.35.2", only: [:dev, :test]},
       {:tesla, "~> 1.8"},
       {:hackney, "~> 1.20"},
-      {:flow, "~> 1.2", only: [:dev, :test]}
+      {:flow, "~> 1.2", only: [:dev, :test]},
+      {:unzip, "0.11.0"}
     ]
   end
 end

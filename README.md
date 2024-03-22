@@ -23,3 +23,6 @@ The data for cities comes from the [geonames](http://www.geonames.org/) project.
 
 ### Postal Codes
 The data for postal codes comes from the [geonames](http://www.geonames.org/) project. This project has scripts to download all or individual postal code files via the --source option.
+
+#### Postal Code Helpers
+Postal codes can be downloaded 
