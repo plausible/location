@@ -31,7 +31,7 @@ defmodule Location.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :observer, :wx]
     ]
   end
 
@@ -42,7 +42,8 @@ defmodule Location.MixProject do
       {:nimble_csv, "~> 1.1"},
       {:floki, "~> 0.31.0", only: [:dev, :test]},
       {:httpoison, "~> 1.8", only: [:dev, :test]},
-      {:flow, "~> 1.0", only: [:dev, :test]}
+      {:flow, "~> 1.0", only: [:dev, :test]},
+      {:benchee, "~> 1.3", only: :bench}
     ]
   end
 end

@@ -81,4 +81,42 @@ defmodule Location.City do
   defp to_struct(id, name, country_code) do
     %__MODULE__{id: id, name: name, country_code: country_code}
   end
+
+  def async_load_map do
+    task =
+      Task.async(fn ->
+        csv = File.read!(source_file())
+        parsed_csv = LocationCSV.parse_string(csv)
+
+        {id_to_city, city_to_id} =
+          Enum.reduce(parsed_csv, {%{}, %{}}, fn [id, name, country_code],
+                                                 {id_to_city, city_to_id} ->
+            id = String.to_integer(id)
+            id_to_city = Map.put(id_to_city, id, {name, country_code})
+            city_to_id = Map.put_new(city_to_id, {name, country_code}, id)
+            {id_to_city, city_to_id}
+          end)
+
+        :persistent_term.put(:location_id_to_city, id_to_city)
+        :persistent_term.put(:location_city_to_id, city_to_id)
+      end)
+
+    Task.await(task, :timer.seconds(30))
+  end
+
+  def read_map do
+    Task.await(
+      Task.async(fn ->
+        id_to_city = :erlang.binary_to_term(File.read!("id_to_city.bin"))
+        :persistent_term.put(:location_id_to_city, id_to_city)
+      end)
+    )
+
+    Enum.each(Process.list(), &:erlang.garbage_collect/1)
+  end
+
+  def get_city_map(id) when is_integer(id) do
+    id_to_city = :persistent_term.get(:location_id_to_city)
+    Map.get(id_to_city, id)
+  end
 end
