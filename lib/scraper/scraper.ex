@@ -33,8 +33,11 @@ defmodule Location.Scraper do
       {"tr", _attrs, cells} ->
         Enum.find_index(cells, fn cell ->
           text = String.downcase(cell_text(cell))
-          String.starts_with?(text, "subdivision name (en)")
-          || String.starts_with?(text, "subdivision name (sv)")
+          if country.alpha_2 == "SE" do # https://github.com/plausible/analytics/issues/3260
+            String.starts_with?(text, "subdivision name (sv)")
+          else
+            String.starts_with?(text, "subdivision name (en)")
+          end
         end)
       _ -> nil
     end
