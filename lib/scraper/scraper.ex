@@ -16,8 +16,9 @@ defmodule Location.Scraper do
       Enum.map(countries, &scrape_country/1)
       |> Enum.filter(&(not is_nil(&1)))
       |> List.flatten()
-      |> Enum.into(%{})
-      |> Jason.encode!()
+      |> Enum.sort()
+      |> Jason.OrderedObject.new()
+      |> Jason.encode_to_iodata!(pretty: true)
 
     File.write!(@translations_dest, res)
   end
