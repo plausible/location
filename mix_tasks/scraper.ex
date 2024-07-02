@@ -33,7 +33,13 @@ defmodule Location.Scraper do
     rows =
       Floki.find(document, "table.wikitable.sortable")
       |> List.first()
-      |> Floki.find("tbody tr")
+      |> then(fn table ->
+        if table do
+          Floki.find(table, "tbody tr")
+        else
+          []
+        end
+      end)
 
     english_name_column =
       case List.first(rows) do
