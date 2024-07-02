@@ -9,5 +9,14 @@
     "alpha_2": "A1",
     "flag": "🏳️",
     "name": "Anonymous VPN Service"
+  },
+  {
+    "alpha_2": "TR",
+    "alpha_3": "TUR",
+    "flag": "🇹🇷",
+    "name": "Türkiye",
+    "common_name": "Turkey",
+    "numeric": "792",
+    "official_name": "Republic of Türkiye"
   }
 ]

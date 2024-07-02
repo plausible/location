@@ -16,6 +16,13 @@ defmodule Location.Subdivision do
       :ets.insert(ets, {entry["code"], to_struct(entry)})
     end)
 
+    File.read!(restore_source_file())
+    |> Jason.decode!()
+    |> Enum.each(fn entry ->
+      entry = translate_entry(translations, entry)
+      :ets.insert(ets, {entry["code"], to_struct(entry)})
+    end)
+
     File.read!(override_source_file())
     |> Jason.decode!()
     |> Enum.each(fn entry ->
@@ -70,6 +77,10 @@ defmodule Location.Subdivision do
 
   defp source_file() do
     Application.app_dir(:location, "priv/iso_3166-2.json")
+  end
+
+  defp restore_source_file() do
+    Application.app_dir(:location, "priv/restore/iso_3166-2.json")
   end
 
   defp translations_file() do

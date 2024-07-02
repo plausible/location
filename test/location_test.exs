@@ -38,6 +38,38 @@ defmodule LocationTest do
       assert match.code == "EE-79"
       assert match.name == "Tartumaa"
     end
+
+    test "can lookup former subdivisions" do
+      # changed to FR-75C in 2021-11-25: https://en.wikipedia.org/wiki/ISO_3166-2:FR#Changes
+      assert Location.get_subdivision("FR-75").name == "Paris"
+
+      # FR-GF and some other codes were removed in 2021-11-25: https://en.wikipedia.org/wiki/ISO_3166-2:FR#Changes
+      assert Location.get_subdivision("FR-GF").name == "Guyane (française)"
+
+      # GT-AV and some other codes were changed in 2021-11-25: https://en.wikipedia.org/wiki/ISO_3166-2:GT#Changes
+      assert Location.get_subdivision("GT-AV").name == "Alta Verapaz"
+
+      # IN-CT and some other codes were changed in 2023-11-23: https://en.wikipedia.org/wiki/ISO_3166-2:IN#Changes
+      assert Location.get_subdivision("IN-CT").name == "Chhattīsgarh"
+
+      # IS-BFJ and some other codes were removed in 2021-11-25: https://en.wikipedia.org/wiki/ISO_3166-2:IS#Changes
+      assert Location.get_subdivision("IS-BFJ").name == "Borgarfjarðarhreppur"
+
+      # IS-AKH and some other codes were removed in 2022-11-29: https://en.wikipedia.org/wiki/ISO_3166-2:IS#Changes
+      assert Location.get_subdivision("IS-AKH").name == "Akrahreppur"
+
+      # KZ-ALA and some other codes were changed in 2022-11-29: https://en.wikipedia.org/wiki/ISO_3166-2:KZ#Changes
+      assert Location.get_subdivision("KZ-ALA").name == "Almaty"
+
+      # LV-001 and some other codes were removed in 2021-11-25: https://en.wikipedia.org/wiki/ISO_3166-2:LV#Changes
+      assert Location.get_subdivision("LV-001").name == "Aglonas novads"
+
+      # NP-1 and some other codes were removed in 2022-11-29: https://en.wikipedia.org/wiki/ISO_3166-2:NP#Changes
+      assert Location.get_subdivision("NP-1").name == "Central"
+
+      # PH-MAG was split in two in 2023-11-23: https://en.wikipedia.org/wiki/ISO_3166-2:PH#Changes
+      assert Location.get_subdivision("PH-MAG").name == "Maguindanao"
+    end
   end
 
   describe "city" do

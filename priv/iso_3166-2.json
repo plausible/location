@@ -1512,7 +1512,7 @@
     },
     {
       "code": "BE-BRU",
-      "name": "Brussels Hoofdstedelijk Gewest",
+      "name": "Bruxelles-Capitale, Région de",
       "type": "Region"
     },
     {
@@ -3032,7 +3032,7 @@
     },
     {
       "code": "CF-KG",
-      "name": "Kemö-Gïrïbïngï",
+      "name": "Kémo-Gribingui",
       "type": "Prefecture"
     },
     {
@@ -3152,7 +3152,7 @@
     },
     {
       "code": "CH-BE",
-      "name": "Bern",
+      "name": "Berne",
       "type": "Canton"
     },
     {
@@ -3167,7 +3167,7 @@
     },
     {
       "code": "CH-FR",
-      "name": "Freiburg",
+      "name": "Fribourg",
       "type": "Canton"
     },
     {
@@ -3572,7 +3572,7 @@
     },
     {
       "code": "CN-NX",
-      "name": "Ningxia Huizi Zizhiqu",
+      "name": "Ningxia Huizu Zizhiqu",
       "type": "Autonomous region"
     },
     {
@@ -4617,7 +4617,7 @@
     },
     {
       "code": "DJ-OB",
-      "name": "Awbūk",
+      "name": "Obock",
       "type": "Region"
     },
     {
@@ -5148,6 +5148,56 @@
     {
       "code": "DZ-48",
       "name": "Relizane",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-49",
+      "name": "Timimoun",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-50",
+      "name": "Bordj Badji Mokhtar",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-51",
+      "name": "Ouled Djellal",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-52",
+      "name": "Béni Abbès",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-53",
+      "name": "In Salah",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-54",
+      "name": "In Guezzam",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-55",
+      "name": "Touggourt",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-56",
+      "name": "Djanet",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-57",
+      "name": "El Meghaier",
+      "type": "Province"
+    },
+    {
+      "code": "DZ-58",
+      "name": "El Meniaa",
       "type": "Province"
     },
     {
@@ -6291,6 +6341,11 @@
       "type": "Regional state"
     },
     {
+      "code": "ET-SI",
+      "name": "Sidama",
+      "type": "Regional state"
+    },
+    {
       "code": "ET-SN",
       "name": "Southern Nations, Nationalities and Peoples",
       "type": "Regional state"
@@ -6301,13 +6356,18 @@
       "type": "Regional state"
     },
     {
+      "code": "ET-SW",
+      "name": "Southwest Ethiopia Peoples",
+      "type": "Regional state"
+    },
+    {
       "code": "ET-TI",
       "name": "Tigrai",
       "type": "Regional state"
     },
     {
       "code": "FI-01",
-      "name": "Ahvenanmaan maakunta",
+      "name": "Landskapet Åland",
       "type": "Region"
     },
     {
@@ -6332,7 +6392,7 @@
     },
     {
       "code": "FI-06",
-      "name": "Egentliga Tavastland",
+      "name": "Kanta-Häme",
       "type": "Region"
     },
     {
@@ -6357,7 +6417,7 @@
     },
     {
       "code": "FI-11",
-      "name": "Birkaland",
+      "name": "Pirkanmaa",
       "type": "Region"
     },
     {
@@ -6367,37 +6427,37 @@
     },
     {
       "code": "FI-13",
-      "name": "Norra Karelen",
+      "name": "Pohjois-Karjala",
       "type": "Region"
     },
     {
       "code": "FI-14",
-      "name": "Norra Österbotten",
+      "name": "Pohjois-Pohjanmaa",
       "type": "Region"
     },
     {
       "code": "FI-15",
-      "name": "Norra Savolax",
+      "name": "Pohjois-Savo",
       "type": "Region"
     },
     {
       "code": "FI-16",
-      "name": "Päijänne-Tavastland",
+      "name": "Päijät-Häme",
       "type": "Region"
     },
     {
       "code": "FI-17",
-      "name": "Satakunda",
+      "name": "Satakunta",
       "type": "Region"
     },
     {
       "code": "FI-18",
-      "name": "Nyland",
+      "name": "Uusimaa",
       "type": "Region"
     },
     {
       "code": "FI-19",
-      "name": "Egentliga Finland",
+      "name": "Varsinais-Suomi",
       "type": "Region"
     },
     {
@@ -6871,6 +6931,16 @@
       "type": "Metropolitan department"
     },
     {
+      "code": "FR-69M",
+      "name": "Métropole de Lyon",
+      "type": "Metropolitan collectivity with special status"
+    },
+    {
+      "code": "FR-6AE",
+      "name": "Alsace",
+      "type": "European collectivity"
+    },
+    {
       "code": "FR-70",
       "name": "Haute-Saône",
       "type": "Metropolitan department"
@@ -6896,9 +6966,9 @@
       "type": "Metropolitan department"
     },
     {
-      "code": "FR-75",
+      "code": "FR-75C",
       "name": "Paris",
-      "type": "Metropolitan department"
+      "type": "Metropolitan collectivity with special status"
     },
     {
       "code": "FR-76",
@@ -7003,27 +7073,27 @@
     {
       "code": "FR-971",
       "name": "Guadeloupe",
-      "type": "Overseas department"
+      "type": "Overseas departmental collectivity"
     },
     {
       "code": "FR-972",
       "name": "Martinique",
-      "type": "Overseas department"
+      "type": "Overseas unique territorial collectivity"
     },
     {
       "code": "FR-973",
       "name": "Guyane (française)",
-      "type": "Overseas department"
+      "type": "Overseas unique territorial collectivity"
     },
     {
       "code": "FR-974",
       "name": "La Réunion",
-      "type": "Overseas department"
+      "type": "Overseas departmental collectivity"
     },
     {
       "code": "FR-976",
       "name": "Mayotte",
-      "type": "Overseas department"
+      "type": "Overseas departmental collectivity"
     },
     {
       "code": "FR-ARA",
@@ -7061,16 +7131,6 @@
       "type": "Metropolitan region"
     },
     {
-      "code": "FR-GF",
-      "name": "Guyane (française)",
-      "type": "Overseas region"
-    },
-    {
-      "code": "FR-GP",
-      "name": "Guadeloupe",
-      "type": "Overseas region"
-    },
-    {
       "code": "FR-HDF",
       "name": "Hauts-de-France",
       "type": "Metropolitan region"
@@ -7084,11 +7144,6 @@
       "code": "FR-MF",
       "name": "Saint-Martin",
       "type": "Overseas collectivity"
-    },
-    {
-      "code": "FR-MQ",
-      "name": "Martinique",
-      "type": "Overseas region"
     },
     {
       "code": "FR-NAQ",
@@ -7131,11 +7186,6 @@
       "type": "Overseas collectivity"
     },
     {
-      "code": "FR-RE",
-      "name": "La Réunion",
-      "type": "Overseas region"
-    },
-    {
       "code": "FR-TF",
       "name": "Terres australes françaises",
       "type": "Overseas territory"
@@ -7144,11 +7194,6 @@
       "code": "FR-WF",
       "name": "Wallis-et-Futuna",
       "type": "Overseas collectivity"
-    },
-    {
-      "code": "FR-YT",
-      "name": "Mayotte",
-      "type": "Overseas region"
     },
     {
       "code": "GA-1",
@@ -7293,7 +7338,7 @@
     {
       "code": "GB-BKM",
       "name": "Buckinghamshire",
-      "type": "Two-tier county"
+      "type": "Unitary authority"
     },
     {
       "code": "GB-BNE",
@@ -7524,6 +7569,11 @@
       "code": "GB-ENF",
       "name": "Enfield",
       "type": "London borough"
+    },
+    {
+      "code": "GB-ENG",
+      "name": "England",
+      "type": "Country"
     },
     {
       "code": "GB-ERW",
@@ -7846,6 +7896,11 @@
       "type": "Unitary authority"
     },
     {
+      "code": "GB-NIR",
+      "name": "Northern Ireland",
+      "type": "Province"
+    },
+    {
       "code": "GB-NLK",
       "name": "North Lanarkshire",
       "type": "Council area"
@@ -7861,14 +7916,14 @@
       "type": "District"
     },
     {
-      "code": "GB-NSM",
-      "name": "North Somerset",
+      "code": "GB-NNH",
+      "name": "North Northamptonshire",
       "type": "Unitary authority"
     },
     {
-      "code": "GB-NTH",
-      "name": "Northamptonshire",
-      "type": "Two-tier county"
+      "code": "GB-NSM",
+      "name": "North Somerset",
+      "type": "Unitary authority"
     },
     {
       "code": "GB-NTL",
@@ -8004,6 +8059,11 @@
       "code": "GB-SCB",
       "name": "Scottish Borders",
       "type": "Council area"
+    },
+    {
+      "code": "GB-SCT",
+      "name": "Scotland",
+      "type": "Country"
     },
     {
       "code": "GB-SFK",
@@ -8216,6 +8276,11 @@
       "type": "Council area"
     },
     {
+      "code": "GB-WLS",
+      "name": "Wales [Cymru GB-CYM]",
+      "type": "Country"
+    },
+    {
       "code": "GB-WLV",
       "name": "Wolverhampton",
       "type": "Metropolitan district"
@@ -8224,6 +8289,11 @@
       "code": "GB-WND",
       "name": "Wandsworth",
       "type": "London borough"
+    },
+    {
+      "code": "GB-WNH",
+      "name": "West Northamptonshire",
+      "type": "Unitary authority"
     },
     {
       "code": "GB-WNM",
@@ -8727,7 +8797,7 @@
     },
     {
       "code": "GQ-C",
-      "name": "Região Continental",
+      "name": "Région Continentale",
       "type": "Region"
     },
     {
@@ -8742,7 +8812,7 @@
     },
     {
       "code": "GQ-I",
-      "name": "Região Insular",
+      "name": "Région Insulaire",
       "type": "Region"
     },
     {
@@ -8752,7 +8822,7 @@
     },
     {
       "code": "GQ-LI",
-      "name": "Litoral",
+      "name": "Littoral",
       "type": "Province"
     },
     {
@@ -8831,113 +8901,113 @@
       "type": "Administrative region"
     },
     {
-      "code": "GT-AV",
-      "name": "Alta Verapaz",
-      "type": "Department"
-    },
-    {
-      "code": "GT-BV",
-      "name": "Baja Verapaz",
-      "type": "Department"
-    },
-    {
-      "code": "GT-CM",
-      "name": "Chimaltenango",
-      "type": "Department"
-    },
-    {
-      "code": "GT-CQ",
-      "name": "Chiquimula",
-      "type": "Department"
-    },
-    {
-      "code": "GT-ES",
-      "name": "Escuintla",
-      "type": "Department"
-    },
-    {
-      "code": "GT-GU",
+      "code": "GT-01",
       "name": "Guatemala",
       "type": "Department"
     },
     {
-      "code": "GT-HU",
-      "name": "Huehuetenango",
-      "type": "Department"
-    },
-    {
-      "code": "GT-IZ",
-      "name": "Izabal",
-      "type": "Department"
-    },
-    {
-      "code": "GT-JA",
-      "name": "Jalapa",
-      "type": "Department"
-    },
-    {
-      "code": "GT-JU",
-      "name": "Jutiapa",
-      "type": "Department"
-    },
-    {
-      "code": "GT-PE",
-      "name": "Petén",
-      "type": "Department"
-    },
-    {
-      "code": "GT-PR",
+      "code": "GT-02",
       "name": "El Progreso",
       "type": "Department"
     },
     {
-      "code": "GT-QC",
-      "name": "Quiché",
-      "type": "Department"
-    },
-    {
-      "code": "GT-QZ",
-      "name": "Quetzaltenango",
-      "type": "Department"
-    },
-    {
-      "code": "GT-RE",
-      "name": "Retalhuleu",
-      "type": "Department"
-    },
-    {
-      "code": "GT-SA",
+      "code": "GT-03",
       "name": "Sacatepéquez",
       "type": "Department"
     },
     {
-      "code": "GT-SM",
-      "name": "San Marcos",
+      "code": "GT-04",
+      "name": "Chimaltenango",
       "type": "Department"
     },
     {
-      "code": "GT-SO",
-      "name": "Sololá",
+      "code": "GT-05",
+      "name": "Escuintla",
       "type": "Department"
     },
     {
-      "code": "GT-SR",
+      "code": "GT-06",
       "name": "Santa Rosa",
       "type": "Department"
     },
     {
-      "code": "GT-SU",
-      "name": "Suchitepéquez",
+      "code": "GT-07",
+      "name": "Sololá",
       "type": "Department"
     },
     {
-      "code": "GT-TO",
+      "code": "GT-08",
       "name": "Totonicapán",
       "type": "Department"
     },
     {
-      "code": "GT-ZA",
+      "code": "GT-09",
+      "name": "Quetzaltenango",
+      "type": "Department"
+    },
+    {
+      "code": "GT-10",
+      "name": "Suchitepéquez",
+      "type": "Department"
+    },
+    {
+      "code": "GT-11",
+      "name": "Retalhuleu",
+      "type": "Department"
+    },
+    {
+      "code": "GT-12",
+      "name": "San Marcos",
+      "type": "Department"
+    },
+    {
+      "code": "GT-13",
+      "name": "Huehuetenango",
+      "type": "Department"
+    },
+    {
+      "code": "GT-14",
+      "name": "Quiché",
+      "type": "Department"
+    },
+    {
+      "code": "GT-15",
+      "name": "Baja Verapaz",
+      "type": "Department"
+    },
+    {
+      "code": "GT-16",
+      "name": "Alta Verapaz",
+      "type": "Department"
+    },
+    {
+      "code": "GT-17",
+      "name": "Petén",
+      "type": "Department"
+    },
+    {
+      "code": "GT-18",
+      "name": "Izabal",
+      "type": "Department"
+    },
+    {
+      "code": "GT-19",
       "name": "Zacapa",
+      "type": "Department"
+    },
+    {
+      "code": "GT-20",
+      "name": "Chiquimula",
+      "type": "Department"
+    },
+    {
+      "code": "GT-21",
+      "name": "Jalapa",
+      "type": "Department"
+    },
+    {
+      "code": "GT-22",
+      "name": "Jutiapa",
       "type": "Department"
     },
     {
@@ -9257,7 +9327,7 @@
     },
     {
       "code": "HT-GA",
-      "name": "Grandans",
+      "name": "Grande’Anse",
       "type": "Department"
     },
     {
@@ -9272,7 +9342,7 @@
     },
     {
       "code": "HT-NI",
-      "name": "Nip",
+      "name": "Nippes",
       "type": "Department"
     },
     {
@@ -9282,17 +9352,17 @@
     },
     {
       "code": "HT-OU",
-      "name": "Lwès",
+      "name": "Ouest",
       "type": "Department"
     },
     {
       "code": "HT-SD",
-      "name": "Sid",
+      "name": "Sud",
       "type": "Department"
     },
     {
       "code": "HT-SE",
-      "name": "Sidès",
+      "name": "Sud-Est",
       "type": "Department"
     },
     {
@@ -9327,7 +9397,7 @@
     },
     {
       "code": "HU-CS",
-      "name": "Csongrád",
+      "name": "Csongrád-Csanád",
       "type": "County"
     },
     {
@@ -9651,9 +9721,29 @@
       "type": "Province"
     },
     {
+      "code": "ID-PD",
+      "name": "Papua Barat Daya",
+      "type": "Province"
+    },
+    {
+      "code": "ID-PE",
+      "name": "Papua Pengunungan",
+      "type": "Province"
+    },
+    {
       "code": "ID-PP",
       "name": "Papua",
       "type": "Geographical unit"
+    },
+    {
+      "code": "ID-PS",
+      "name": "Papua Selatan",
+      "type": "Province"
+    },
+    {
+      "code": "ID-PT",
+      "name": "Papua Tengah",
+      "type": "Province"
     },
     {
       "code": "ID-RI",
@@ -9921,14 +10011,14 @@
       "type": "State"
     },
     {
+      "code": "IN-CG",
+      "name": "Chhattīsgarh",
+      "type": "State"
+    },
+    {
       "code": "IN-CH",
       "name": "Chandīgarh",
       "type": "Union territory"
-    },
-    {
-      "code": "IN-CT",
-      "name": "Chhattīsgarh",
-      "type": "State"
     },
     {
       "code": "IN-DH",
@@ -10021,7 +10111,7 @@
       "type": "State"
     },
     {
-      "code": "IN-OR",
+      "code": "IN-OD",
       "name": "Odisha",
       "type": "State"
     },
@@ -10046,11 +10136,6 @@
       "type": "State"
     },
     {
-      "code": "IN-TG",
-      "name": "Telangāna",
-      "type": "State"
-    },
-    {
       "code": "IN-TN",
       "name": "Tamil Nādu",
       "type": "State"
@@ -10061,13 +10146,18 @@
       "type": "State"
     },
     {
-      "code": "IN-UP",
-      "name": "Uttar Pradesh",
+      "code": "IN-TS",
+      "name": "Telangāna",
       "type": "State"
     },
     {
-      "code": "IN-UT",
+      "code": "IN-UK",
       "name": "Uttarākhand",
+      "type": "State"
+    },
+    {
+      "code": "IN-UP",
+      "name": "Uttar Pradesh",
       "type": "State"
     },
     {
@@ -10124,6 +10214,11 @@
       "code": "IQ-KI",
       "name": "Kirkūk",
       "type": "Governorate"
+    },
+    {
+      "code": "IQ-KR",
+      "name": "Herêm-î Kurdistan",
+      "type": "Region"
     },
     {
       "code": "IQ-MA",
@@ -10361,11 +10456,6 @@
       "type": "Region"
     },
     {
-      "code": "IS-AKH",
-      "name": "Akrahreppur",
-      "type": "Municipality"
-    },
-    {
       "code": "IS-AKN",
       "name": "Akraneskaupstaður",
       "type": "Municipality"
@@ -10386,18 +10476,8 @@
       "type": "Municipality"
     },
     {
-      "code": "IS-BFJ",
-      "name": "Borgarfjarðarhreppur",
-      "type": "Municipality"
-    },
-    {
       "code": "IS-BLA",
       "name": "Bláskógabyggð",
-      "type": "Municipality"
-    },
-    {
-      "code": "IS-BLO",
-      "name": "Blönduósbær",
       "type": "Municipality"
     },
     {
@@ -10418,11 +10498,6 @@
     {
       "code": "IS-DAV",
       "name": "Dalvíkurbyggð",
-      "type": "Municipality"
-    },
-    {
-      "code": "IS-DJU",
-      "name": "Djúpavogshreppur",
       "type": "Municipality"
     },
     {
@@ -10448,11 +10523,6 @@
     {
       "code": "IS-FLA",
       "name": "Flóahreppur",
-      "type": "Municipality"
-    },
-    {
-      "code": "IS-FLD",
-      "name": "Fljótsdalshérað",
       "type": "Municipality"
     },
     {
@@ -10491,11 +10561,6 @@
       "type": "Municipality"
     },
     {
-      "code": "IS-HEL",
-      "name": "Helgafellssveit",
-      "type": "Municipality"
-    },
-    {
       "code": "IS-HRG",
       "name": "Hörgársveit",
       "type": "Municipality"
@@ -10506,8 +10571,8 @@
       "type": "Municipality"
     },
     {
-      "code": "IS-HUT",
-      "name": "Húnavatnshreppur",
+      "code": "IS-HUG",
+      "name": "Húnabyggð",
       "type": "Municipality"
     },
     {
@@ -10556,6 +10621,11 @@
       "type": "Municipality"
     },
     {
+      "code": "IS-MUL",
+      "name": "Múlaþing",
+      "type": "Municipality"
+    },
+    {
       "code": "IS-MYR",
       "name": "Mýrdalshreppur",
       "type": "Municipality"
@@ -10591,11 +10661,6 @@
       "type": "Municipality"
     },
     {
-      "code": "IS-SBH",
-      "name": "Svalbarðshreppur",
-      "type": "Municipality"
-    },
-    {
       "code": "IS-SBT",
       "name": "Svalbarðsstrandarhreppur",
       "type": "Municipality"
@@ -10613,11 +10678,6 @@
     {
       "code": "IS-SEL",
       "name": "Seltjarnarnesbær",
-      "type": "Municipality"
-    },
-    {
-      "code": "IS-SEY",
-      "name": "Seyðisfjarðarkaupstaður",
       "type": "Municipality"
     },
     {
@@ -10646,8 +10706,8 @@
       "type": "Municipality"
     },
     {
-      "code": "IS-SKU",
-      "name": "Skútustaðahreppur",
+      "code": "IS-SKR",
+      "name": "Skagafjörður",
       "type": "Municipality"
     },
     {
@@ -10663,11 +10723,6 @@
     {
       "code": "IS-SOL",
       "name": "Sveitarfélagið Ölfus",
-      "type": "Municipality"
-    },
-    {
-      "code": "IS-SSF",
-      "name": "Sveitarfélagið Skagafjörður",
       "type": "Municipality"
     },
     {
@@ -12137,12 +12192,12 @@
     },
     {
       "code": "KM-A",
-      "name": "Andjouân",
+      "name": "Anjouan",
       "type": "Island"
     },
     {
       "code": "KM-G",
-      "name": "Andjazîdja",
+      "name": "Grande Comore",
       "type": "Island"
     },
     {
@@ -12291,6 +12346,11 @@
       "type": "Metropolitan city"
     },
     {
+      "code": "KP-15",
+      "name": "Kaeseong",
+      "type": "Metropolitan city"
+    },
+    {
       "code": "KR-11",
       "name": "Seoul-teukbyeolsi",
       "type": "Special city"
@@ -12332,8 +12392,8 @@
     },
     {
       "code": "KR-42",
-      "name": "Gangwon-do",
-      "type": "Province"
+      "name": "Gangwon-teukbyeoljachido",
+      "type": "Special self-governing province"
     },
     {
       "code": "KR-43",
@@ -12406,89 +12466,104 @@
       "type": "Governorate"
     },
     {
-      "code": "KZ-AKM",
+      "code": "KZ-10",
+      "name": "Abajskaja oblast’",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-11",
       "name": "Akmolinskaja oblast'",
       "type": "Region"
     },
     {
-      "code": "KZ-AKT",
+      "code": "KZ-15",
       "name": "Aktjubinskaja oblast'",
       "type": "Region"
     },
     {
-      "code": "KZ-ALA",
-      "name": "Almaty",
-      "type": "City"
-    },
-    {
-      "code": "KZ-ALM",
+      "code": "KZ-19",
       "name": "Almatinskaja oblast'",
       "type": "Region"
     },
     {
-      "code": "KZ-AST",
-      "name": "Nur-Sultan",
-      "type": "City"
-    },
-    {
-      "code": "KZ-ATY",
+      "code": "KZ-23",
       "name": "Atyrauskaja oblast'",
       "type": "Region"
     },
     {
-      "code": "KZ-KAR",
-      "name": "Karagandinskaja oblast'",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-KUS",
-      "name": "Kostanajskaja oblast'",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-KZY",
-      "name": "Kyzylordinskaja oblast'",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-MAN",
-      "name": "Mangghystaū oblysy",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-PAV",
-      "name": "Pavlodar oblysy",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-SEV",
-      "name": "Severo-Kazahstanskaja oblast'",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-SHY",
-      "name": "Shymkent",
-      "type": "City"
-    },
-    {
-      "code": "KZ-VOS",
-      "name": "Shyghys Qazaqstan oblysy",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-YUZ",
-      "name": "Turkestankaya oblast'",
-      "type": "Region"
-    },
-    {
-      "code": "KZ-ZAP",
+      "code": "KZ-27",
       "name": "Batys Qazaqstan oblysy",
       "type": "Region"
     },
     {
-      "code": "KZ-ZHA",
+      "code": "KZ-31",
       "name": "Zhambyl oblysy",
       "type": "Region"
+    },
+    {
+      "code": "KZ-33",
+      "name": "Zhetisū oblysy",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-35",
+      "name": "Karagandinskaja oblast'",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-39",
+      "name": "Kostanajskaja oblast'",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-43",
+      "name": "Kyzylordinskaja oblast'",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-47",
+      "name": "Mangghystaū oblysy",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-55",
+      "name": "Pavlodar oblysy",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-59",
+      "name": "Severo-Kazahstanskaja oblast'",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-61",
+      "name": "Turkestankaya oblast'",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-62",
+      "name": "Ulytauskaja oblast’",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-63",
+      "name": "Shyghys Qazaqstan oblysy",
+      "type": "Region"
+    },
+    {
+      "code": "KZ-71",
+      "name": "Astana",
+      "type": "City"
+    },
+    {
+      "code": "KZ-75",
+      "name": "Almaty",
+      "type": "City"
+    },
+    {
+      "code": "KZ-79",
+      "name": "Shymkent",
+      "type": "City"
     },
     {
       "code": "LA-AT",
@@ -13042,7 +13117,7 @@
     },
     {
       "code": "LT-05",
-      "name": "Birštono",
+      "name": "Birštonas",
       "type": "Municipality"
     },
     {
@@ -13087,7 +13162,7 @@
     },
     {
       "code": "LT-14",
-      "name": "Kalvarijos",
+      "name": "Kalvarija",
       "type": "Municipality"
     },
     {
@@ -13212,7 +13287,7 @@
     },
     {
       "code": "LT-39",
-      "name": "Rietavo",
+      "name": "Rietavas",
       "type": "Municipality"
     },
     {
@@ -13377,7 +13452,7 @@
     },
     {
       "code": "LU-CL",
-      "name": "Clerf",
+      "name": "Clervaux",
       "type": "Canton"
     },
     {
@@ -13392,7 +13467,7 @@
     },
     {
       "code": "LU-ES",
-      "name": "Esch an der Alzette",
+      "name": "Esch-sur-Alzette",
       "type": "Canton"
     },
     {
@@ -13422,7 +13497,7 @@
     },
     {
       "code": "LU-VD",
-      "name": "Veianen",
+      "name": "Vianden",
       "type": "Canton"
     },
     {
@@ -13431,33 +13506,8 @@
       "type": "Canton"
     },
     {
-      "code": "LV-001",
-      "name": "Aglonas novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-002",
       "name": "Aizkraukles novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-003",
-      "name": "Aizputes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-004",
-      "name": "Aknīstes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-005",
-      "name": "Alojas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-006",
-      "name": "Alsungas novads",
       "type": "Municipality"
     },
     {
@@ -13466,38 +13516,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-008",
-      "name": "Amatas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-009",
-      "name": "Apes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-010",
-      "name": "Auces novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-011",
       "name": "Ādažu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-012",
-      "name": "Babītes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-013",
-      "name": "Baldones novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-014",
-      "name": "Baltinavas novads",
       "type": "Municipality"
     },
     {
@@ -13511,48 +13531,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-017",
-      "name": "Beverīnas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-018",
-      "name": "Brocēnu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-019",
-      "name": "Burtnieku novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-020",
-      "name": "Carnikavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-021",
-      "name": "Cesvaines novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-022",
       "name": "Cēsu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-023",
-      "name": "Ciblas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-024",
-      "name": "Dagdas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-025",
-      "name": "Daugavpils novads",
       "type": "Municipality"
     },
     {
@@ -13561,73 +13541,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-027",
-      "name": "Dundagas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-028",
-      "name": "Durbes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-029",
-      "name": "Engures novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-030",
-      "name": "Ērgļu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-031",
-      "name": "Garkalnes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-032",
-      "name": "Grobiņas novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-033",
       "name": "Gulbenes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-034",
-      "name": "Iecavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-035",
-      "name": "Ikšķiles novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-036",
-      "name": "Ilūkstes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-037",
-      "name": "Inčukalna novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-038",
-      "name": "Jaunjelgavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-039",
-      "name": "Jaunpiebalgas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-040",
-      "name": "Jaunpils novads",
       "type": "Municipality"
     },
     {
@@ -13641,38 +13556,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-043",
-      "name": "Kandavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-044",
-      "name": "Kārsavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-045",
-      "name": "Kocēnu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-046",
-      "name": "Kokneses novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-047",
       "name": "Krāslavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-048",
-      "name": "Krimuldas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-049",
-      "name": "Krustpils novads",
       "type": "Municipality"
     },
     {
@@ -13681,18 +13566,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-051",
-      "name": "Ķeguma novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-052",
       "name": "Ķekavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-053",
-      "name": "Lielvārdes novads",
       "type": "Municipality"
     },
     {
@@ -13701,18 +13576,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-055",
-      "name": "Līgatnes novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-056",
       "name": "Līvānu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-057",
-      "name": "Lubānas novads",
       "type": "Municipality"
     },
     {
@@ -13726,38 +13591,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-060",
-      "name": "Mazsalacas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-061",
-      "name": "Mālpils novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-062",
       "name": "Mārupes novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-063",
-      "name": "Mērsraga novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-064",
-      "name": "Naukšēnu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-065",
-      "name": "Neretas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-066",
-      "name": "Nīcas novads",
       "type": "Municipality"
     },
     {
@@ -13771,43 +13606,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-069",
-      "name": "Ozolnieku novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-070",
-      "name": "Pārgaujas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-071",
-      "name": "Pāvilostas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-072",
-      "name": "Pļaviņu novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-073",
       "name": "Preiļu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-074",
-      "name": "Priekules novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-075",
-      "name": "Priekuļu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-076",
-      "name": "Raunas novads",
       "type": "Municipality"
     },
     {
@@ -13816,48 +13616,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-078",
-      "name": "Riebiņu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-079",
-      "name": "Rojas novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-080",
       "name": "Ropažu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-081",
-      "name": "Rucavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-082",
-      "name": "Rugāju novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-083",
-      "name": "Rundāles novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-084",
-      "name": "Rūjienas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-085",
-      "name": "Salas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-086",
-      "name": "Salacgrīvas novads",
       "type": "Municipality"
     },
     {
@@ -13876,23 +13636,8 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-090",
-      "name": "Sējas novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-091",
       "name": "Siguldas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-092",
-      "name": "Skrīveru novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-093",
-      "name": "Skrundas novads",
       "type": "Municipality"
     },
     {
@@ -13901,33 +13646,13 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-095",
-      "name": "Stopiņu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-096",
-      "name": "Strenču novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-097",
       "name": "Talsu novads",
       "type": "Municipality"
     },
     {
-      "code": "LV-098",
-      "name": "Tērvetes novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-099",
       "name": "Tukuma novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-100",
-      "name": "Vaiņodes novads",
       "type": "Municipality"
     },
     {
@@ -13941,89 +13666,59 @@
       "type": "Municipality"
     },
     {
-      "code": "LV-103",
-      "name": "Vārkavas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-104",
-      "name": "Vecpiebalgas novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-105",
-      "name": "Vecumnieku novads",
-      "type": "Municipality"
-    },
-    {
       "code": "LV-106",
       "name": "Ventspils novads",
       "type": "Municipality"
     },
     {
-      "code": "LV-107",
-      "name": "Viesītes novads",
+      "code": "LV-111",
+      "name": "Augšdaugavas novads",
       "type": "Municipality"
     },
     {
-      "code": "LV-108",
-      "name": "Viļakas novads",
+      "code": "LV-112",
+      "name": "Dienvidkurzemes Novads",
       "type": "Municipality"
     },
     {
-      "code": "LV-109",
-      "name": "Viļānu novads",
-      "type": "Municipality"
-    },
-    {
-      "code": "LV-110",
-      "name": "Zilupes novads",
+      "code": "LV-113",
+      "name": "Valmieras Novads",
       "type": "Municipality"
     },
     {
       "code": "LV-DGV",
       "name": "Daugavpils",
-      "type": "Republican city"
+      "type": "State city"
     },
     {
       "code": "LV-JEL",
       "name": "Jelgava",
-      "type": "Republican city"
-    },
-    {
-      "code": "LV-JKB",
-      "name": "Jēkabpils",
-      "type": "Republican city"
+      "type": "State city"
     },
     {
       "code": "LV-JUR",
       "name": "Jūrmala",
-      "type": "Republican city"
+      "type": "State city"
     },
     {
       "code": "LV-LPX",
       "name": "Liepāja",
-      "type": "Republican city"
+      "type": "State city"
     },
     {
       "code": "LV-REZ",
       "name": "Rēzekne",
-      "type": "Republican city"
+      "type": "State city"
     },
     {
       "code": "LV-RIX",
       "name": "Rīga",
-      "type": "Republican city"
+      "type": "State city"
     },
     {
       "code": "LV-VEN",
       "name": "Ventspils",
-      "type": "Republican city"
-    },
-    {
-      "code": "LV-VMR",
-      "name": "Valmiera",
-      "type": "Republican city"
+      "type": "State city"
     },
     {
       "code": "LY-BA",
@@ -14958,6 +14653,11 @@
     {
       "code": "ME-24",
       "name": "Tuzi",
+      "type": "Municipality"
+    },
+    {
+      "code": "ME-25",
+      "name": "Zeta",
       "type": "Municipality"
     },
     {
@@ -16528,7 +16228,7 @@
     {
       "code": "MX-CMX",
       "name": "Ciudad de México",
-      "type": "Federal district"
+      "type": "Federal entity"
     },
     {
       "code": "MX-COA",
@@ -17326,98 +17026,18 @@
       "type": "County"
     },
     {
-      "code": "NP-1",
-      "name": "Central",
-      "type": "Development region"
-    },
-    {
-      "code": "NP-2",
-      "name": "Mid Western",
-      "type": "Development region"
-    },
-    {
-      "code": "NP-3",
-      "name": "Western",
-      "type": "Development region"
-    },
-    {
-      "code": "NP-4",
-      "name": "Eastern",
-      "type": "Development region"
-    },
-    {
-      "code": "NP-5",
-      "name": "Far Western",
-      "type": "Development region"
-    },
-    {
-      "code": "NP-BA",
-      "name": "Bagmati",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-BH",
-      "name": "Bheri",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-DH",
-      "name": "Dhawalagiri",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-GA",
-      "name": "Gandaki",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-JA",
-      "name": "Janakpur",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-KA",
-      "name": "Karnali",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-KO",
-      "name": "Kosi",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-LU",
-      "name": "Lumbini",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-MA",
-      "name": "Mahakali",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-ME",
-      "name": "Mechi",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-NA",
-      "name": "Narayani",
-      "type": "Zone"
-    },
-    {
       "code": "NP-P1",
-      "name": "Province 1",
+      "name": "Koshi",
       "type": "Province"
     },
     {
       "code": "NP-P2",
-      "name": "Province 2",
+      "name": "Madhesh",
       "type": "Province"
     },
     {
       "code": "NP-P3",
-      "name": "Bāgmatī",
+      "name": "Bagmati",
       "type": "Province"
     },
     {
@@ -17427,7 +17047,7 @@
     },
     {
       "code": "NP-P5",
-      "name": "Province 5",
+      "name": "Lumbini",
       "type": "Province"
     },
     {
@@ -17437,23 +17057,8 @@
     },
     {
       "code": "NP-P7",
-      "name": "Sudūr Pashchim",
+      "name": "Sudurpashchim",
       "type": "Province"
-    },
-    {
-      "code": "NP-RA",
-      "name": "Rapti",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-SA",
-      "name": "Sagarmatha",
-      "type": "Zone"
-    },
-    {
-      "code": "NP-SE",
-      "name": "Seti",
-      "type": "Zone"
     },
     {
       "code": "NR-01",
@@ -17562,7 +17167,7 @@
     },
     {
       "code": "NZ-MWT",
-      "name": "Manawatu-Wanganui",
+      "name": "Manawatū-Whanganui",
       "type": "Region"
     },
     {
@@ -17597,7 +17202,7 @@
     },
     {
       "code": "NZ-WGN",
-      "name": "Wellington",
+      "name": "Greater Wellington",
       "type": "Region"
     },
     {
@@ -17727,7 +17332,12 @@
     },
     {
       "code": "PA-NB",
-      "name": "Ngöbe-Buglé",
+      "name": "Ngäbe-Buglé",
+      "type": "Indigenous region"
+    },
+    {
+      "code": "PA-NT",
+      "name": "Naso Tjër Di",
       "type": "Indigenous region"
     },
     {
@@ -18281,11 +17891,6 @@
       "type": "Province"
     },
     {
-      "code": "PH-MAG",
-      "name": "Maguindanao",
-      "type": "Province"
-    },
-    {
       "code": "PH-MAS",
       "name": "Masbate",
       "type": "Province"
@@ -18298,6 +17903,16 @@
     {
       "code": "PH-MDR",
       "name": "Mindoro Oriental",
+      "type": "Province"
+    },
+    {
+      "code": "PH-MGN",
+      "name": "Maguindanao del Norte",
+      "type": "Province"
+    },
+    {
+      "code": "PH-MGS",
+      "name": "Maguindanao del Sur",
       "type": "Province"
     },
     {
@@ -18502,7 +18117,7 @@
     },
     {
       "code": "PL-04",
-      "name": "Kujawsko-pomorskie",
+      "name": "Kujawsko-Pomorskie",
       "type": "Voivodship"
     },
     {
@@ -18562,7 +18177,7 @@
     },
     {
       "code": "PL-28",
-      "name": "Warmińsko-mazurskie",
+      "name": "Warmińsko-Mazurskie",
       "type": "Voivodship"
     },
     {
@@ -20313,7 +19928,7 @@
     {
       "code": "SI-011",
       "name": "Celje",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-012",
@@ -20477,7 +20092,7 @@
     },
     {
       "code": "SI-044",
-      "name": "Kanal",
+      "name": "Kanal ob Soči",
       "type": "Municipality"
     },
     {
@@ -20508,7 +20123,7 @@
     {
       "code": "SI-050",
       "name": "Koper",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-051",
@@ -20518,7 +20133,7 @@
     {
       "code": "SI-052",
       "name": "Kranj",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-053",
@@ -20528,7 +20143,7 @@
     {
       "code": "SI-054",
       "name": "Krško",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-055",
@@ -20563,7 +20178,7 @@
     {
       "code": "SI-061",
       "name": "Ljubljana",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-062",
@@ -20608,7 +20223,7 @@
     {
       "code": "SI-070",
       "name": "Maribor",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-071",
@@ -20658,7 +20273,7 @@
     {
       "code": "SI-080",
       "name": "Murska Sobota",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-081",
@@ -20678,12 +20293,12 @@
     {
       "code": "SI-084",
       "name": "Nova Gorica",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-085",
       "name": "Novo Mesto",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-086",
@@ -20738,7 +20353,7 @@
     {
       "code": "SI-096",
       "name": "Ptuj",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-097",
@@ -20818,7 +20433,7 @@
     {
       "code": "SI-112",
       "name": "Slovenj Gradec",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-113",
@@ -20923,7 +20538,7 @@
     {
       "code": "SI-133",
       "name": "Velenje",
-      "type": "Municipality"
+      "type": "Urban municipality"
     },
     {
       "code": "SI-134",
@@ -21237,7 +20852,7 @@
     },
     {
       "code": "SI-197",
-      "name": "Kosanjevica na Krki",
+      "name": "Kostanjevica na Krki",
       "type": "Municipality"
     },
     {
@@ -21887,7 +21502,7 @@
     },
     {
       "code": "TD-BA",
-      "name": "Al Baţḩā’",
+      "name": "Batha",
       "type": "Province"
     },
     {
@@ -21932,7 +21547,7 @@
     },
     {
       "code": "TD-LC",
-      "name": "Al Buḩayrah",
+      "name": "Lac",
       "type": "Province"
     },
     {
@@ -21967,7 +21582,7 @@
     },
     {
       "code": "TD-ND",
-      "name": "Madīnat Injamīnā",
+      "name": "Ville de Ndjamena",
       "type": "Province"
     },
     {
@@ -21992,7 +21607,7 @@
     },
     {
       "code": "TD-TI",
-      "name": "Tibastī",
+      "name": "Tibesti",
       "type": "Province"
     },
     {
