@@ -1,0 +1,802 @@
+[
+  {
+    "code": "FR-75",
+    "name": "Paris",
+    "type": "Metropolitan department"
+  },
+  {
+    "code": "FR-GF",
+    "name": "Guyane (française)",
+    "type": "Overseas region"
+  },
+  {
+    "code": "FR-GP",
+    "name": "Guadeloupe",
+    "type": "Overseas region"
+  },
+  {
+    "code": "FR-MQ",
+    "name": "Martinique",
+    "type": "Overseas region"
+  },
+  {
+    "code": "FR-RE",
+    "name": "La Réunion",
+    "type": "Overseas region"
+  },
+  {
+    "code": "FR-YT",
+    "name": "Mayotte",
+    "type": "Overseas region"
+  },
+  {
+    "code": "GB-NTH",
+    "name": "Northamptonshire",
+    "type": "Two-tier county"
+  },
+  {
+    "code": "GT-AV",
+    "name": "Alta Verapaz",
+    "type": "Department"
+  },
+  {
+    "code": "GT-BV",
+    "name": "Baja Verapaz",
+    "type": "Department"
+  },
+  {
+    "code": "GT-CM",
+    "name": "Chimaltenango",
+    "type": "Department"
+  },
+  {
+    "code": "GT-CQ",
+    "name": "Chiquimula",
+    "type": "Department"
+  },
+  {
+    "code": "GT-ES",
+    "name": "Escuintla",
+    "type": "Department"
+  },
+  {
+    "code": "GT-GU",
+    "name": "Guatemala",
+    "type": "Department"
+  },
+  {
+    "code": "GT-HU",
+    "name": "Huehuetenango",
+    "type": "Department"
+  },
+  {
+    "code": "GT-IZ",
+    "name": "Izabal",
+    "type": "Department"
+  },
+  {
+    "code": "GT-JA",
+    "name": "Jalapa",
+    "type": "Department"
+  },
+  {
+    "code": "GT-JU",
+    "name": "Jutiapa",
+    "type": "Department"
+  },
+  {
+    "code": "GT-PE",
+    "name": "Petén",
+    "type": "Department"
+  },
+  {
+    "code": "GT-PR",
+    "name": "El Progreso",
+    "type": "Department"
+  },
+  {
+    "code": "GT-QC",
+    "name": "Quiché",
+    "type": "Department"
+  },
+  {
+    "code": "GT-QZ",
+    "name": "Quetzaltenango",
+    "type": "Department"
+  },
+  {
+    "code": "GT-RE",
+    "name": "Retalhuleu",
+    "type": "Department"
+  },
+  {
+    "code": "GT-SA",
+    "name": "Sacatepéquez",
+    "type": "Department"
+  },
+  {
+    "code": "GT-SM",
+    "name": "San Marcos",
+    "type": "Department"
+  },
+  {
+    "code": "GT-SO",
+    "name": "Sololá",
+    "type": "Department"
+  },
+  {
+    "code": "GT-SR",
+    "name": "Santa Rosa",
+    "type": "Department"
+  },
+  {
+    "code": "GT-SU",
+    "name": "Suchitepéquez",
+    "type": "Department"
+  },
+  {
+    "code": "GT-TO",
+    "name": "Totonicapán",
+    "type": "Department"
+  },
+  {
+    "code": "GT-ZA",
+    "name": "Zacapa",
+    "type": "Department"
+  },
+  {
+    "code": "IN-CT",
+    "name": "Chhattīsgarh",
+    "type": "State"
+  },
+  {
+    "code": "IN-OR",
+    "name": "Odisha",
+    "type": "State"
+  },
+  {
+    "code": "IN-TG",
+    "name": "Telangāna",
+    "type": "State"
+  },
+  {
+    "code": "IN-UT",
+    "name": "Uttarākhand",
+    "type": "State"
+  },
+  {
+    "code": "IS-AKH",
+    "name": "Akrahreppur",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-BFJ",
+    "name": "Borgarfjarðarhreppur",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-BLO",
+    "name": "Blönduósbær",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-DJU",
+    "name": "Djúpavogshreppur",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-FLD",
+    "name": "Fljótsdalshérað",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-HEL",
+    "name": "Helgafellssveit",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-HUT",
+    "name": "Húnavatnshreppur",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-SBH",
+    "name": "Svalbarðshreppur",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-SEY",
+    "name": "Seyðisfjarðarkaupstaður",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-SKU",
+    "name": "Skútustaðahreppur",
+    "type": "Municipality"
+  },
+  {
+    "code": "IS-SSF",
+    "name": "Sveitarfélagið Skagafjörður",
+    "type": "Municipality"
+  },
+  {
+    "code": "KZ-AKM",
+    "name": "Akmolinskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-AKT",
+    "name": "Aktjubinskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-ALA",
+    "name": "Almaty",
+    "type": "City"
+  },
+  {
+    "code": "KZ-ALM",
+    "name": "Almatinskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-AST",
+    "name": "Nur-Sultan",
+    "type": "City"
+  },
+  {
+    "code": "KZ-ATY",
+    "name": "Atyrauskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-KAR",
+    "name": "Karagandinskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-KUS",
+    "name": "Kostanajskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-KZY",
+    "name": "Kyzylordinskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-MAN",
+    "name": "Mangghystaū oblysy",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-PAV",
+    "name": "Pavlodar oblysy",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-SEV",
+    "name": "Severo-Kazahstanskaja oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-SHY",
+    "name": "Shymkent",
+    "type": "City"
+  },
+  {
+    "code": "KZ-VOS",
+    "name": "Shyghys Qazaqstan oblysy",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-YUZ",
+    "name": "Turkestankaya oblast'",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-ZAP",
+    "name": "Batys Qazaqstan oblysy",
+    "type": "Region"
+  },
+  {
+    "code": "KZ-ZHA",
+    "name": "Zhambyl oblysy",
+    "type": "Region"
+  },
+  {
+    "code": "LV-001",
+    "name": "Aglonas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-003",
+    "name": "Aizputes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-004",
+    "name": "Aknīstes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-005",
+    "name": "Alojas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-006",
+    "name": "Alsungas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-008",
+    "name": "Amatas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-009",
+    "name": "Apes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-010",
+    "name": "Auces novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-012",
+    "name": "Babītes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-013",
+    "name": "Baldones novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-014",
+    "name": "Baltinavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-017",
+    "name": "Beverīnas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-018",
+    "name": "Brocēnu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-019",
+    "name": "Burtnieku novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-020",
+    "name": "Carnikavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-021",
+    "name": "Cesvaines novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-023",
+    "name": "Ciblas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-024",
+    "name": "Dagdas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-025",
+    "name": "Daugavpils novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-027",
+    "name": "Dundagas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-028",
+    "name": "Durbes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-029",
+    "name": "Engures novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-030",
+    "name": "Ērgļu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-031",
+    "name": "Garkalnes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-032",
+    "name": "Grobiņas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-034",
+    "name": "Iecavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-035",
+    "name": "Ikšķiles novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-036",
+    "name": "Ilūkstes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-037",
+    "name": "Inčukalna novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-038",
+    "name": "Jaunjelgavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-039",
+    "name": "Jaunpiebalgas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-040",
+    "name": "Jaunpils novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-043",
+    "name": "Kandavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-044",
+    "name": "Kārsavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-045",
+    "name": "Kocēnu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-046",
+    "name": "Kokneses novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-048",
+    "name": "Krimuldas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-049",
+    "name": "Krustpils novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-051",
+    "name": "Ķeguma novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-053",
+    "name": "Lielvārdes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-055",
+    "name": "Līgatnes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-057",
+    "name": "Lubānas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-060",
+    "name": "Mazsalacas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-061",
+    "name": "Mālpils novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-063",
+    "name": "Mērsraga novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-064",
+    "name": "Naukšēnu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-065",
+    "name": "Neretas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-066",
+    "name": "Nīcas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-069",
+    "name": "Ozolnieku novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-070",
+    "name": "Pārgaujas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-071",
+    "name": "Pāvilostas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-072",
+    "name": "Pļaviņu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-074",
+    "name": "Priekules novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-075",
+    "name": "Priekuļu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-076",
+    "name": "Raunas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-078",
+    "name": "Riebiņu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-079",
+    "name": "Rojas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-081",
+    "name": "Rucavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-082",
+    "name": "Rugāju novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-083",
+    "name": "Rundāles novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-084",
+    "name": "Rūjienas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-085",
+    "name": "Salas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-086",
+    "name": "Salacgrīvas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-090",
+    "name": "Sējas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-092",
+    "name": "Skrīveru novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-093",
+    "name": "Skrundas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-095",
+    "name": "Stopiņu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-096",
+    "name": "Strenču novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-098",
+    "name": "Tērvetes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-100",
+    "name": "Vaiņodes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-103",
+    "name": "Vārkavas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-104",
+    "name": "Vecpiebalgas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-105",
+    "name": "Vecumnieku novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-107",
+    "name": "Viesītes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-108",
+    "name": "Viļakas novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-109",
+    "name": "Viļānu novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-110",
+    "name": "Zilupes novads",
+    "type": "Municipality"
+  },
+  {
+    "code": "LV-JKB",
+    "name": "Jēkabpils",
+    "type": "Republican city"
+  },
+  {
+    "code": "LV-VMR",
+    "name": "Valmiera",
+    "type": "Republican city"
+  },
+  {
+    "code": "NP-1",
+    "name": "Central",
+    "type": "Development region"
+  },
+  {
+    "code": "NP-2",
+    "name": "Mid Western",
+    "type": "Development region"
+  },
+  {
+    "code": "NP-3",
+    "name": "Western",
+    "type": "Development region"
+  },
+  {
+    "code": "NP-4",
+    "name": "Eastern",
+    "type": "Development region"
+  },
+  {
+    "code": "NP-5",
+    "name": "Far Western",
+    "type": "Development region"
+  },
+  {
+    "code": "NP-BA",
+    "name": "Bagmati",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-BH",
+    "name": "Bheri",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-DH",
+    "name": "Dhawalagiri",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-GA",
+    "name": "Gandaki",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-JA",
+    "name": "Janakpur",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-KA",
+    "name": "Karnali",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-KO",
+    "name": "Kosi",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-LU",
+    "name": "Lumbini",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-MA",
+    "name": "Mahakali",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-ME",
+    "name": "Mechi",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-NA",
+    "name": "Narayani",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-RA",
+    "name": "Rapti",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-SA",
+    "name": "Sagarmatha",
+    "type": "Zone"
+  },
+  {
+    "code": "NP-SE",
+    "name": "Seti",
+    "type": "Zone"
+  },
+  {
+    "code": "PH-MAG",
+    "name": "Maguindanao",
+    "type": "Province"
+  }
+]
