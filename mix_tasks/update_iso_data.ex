@@ -9,10 +9,13 @@ defmodule Mix.Tasks.UpdateIsoData do
   def run(_) do
     HTTPoison.start()
 
-    response = HTTPoison.get!(@countries_src)
-    File.write!(@countries_dest, response.body)
+    %HTTPoison.Response{status_code: 200, body: countries} = HTTPoison.get!(@countries_src)
+    File.write!(@countries_dest, countries)
 
-    response = HTTPoison.get!(@subdivisions_src)
-    File.write!(@subdivisions_dest, response.body)
+    %HTTPoison.Response{status_code: 200, body: subdivisions} = HTTPoison.get!(@subdivisions_src)
+    %{"3166-2" => subdivisions} = Jason.decode!(subdivisions)
+    subdivisions = Enum.map(fn subdivision -> Map.delete(subdivision, "parent") end)
+    subdivisions = Jason.encode_to_iodata!(%{"3166-2" => subdivisions})
+    File.write!(@subdivisions_dest, subdivisions)
   end
 end
