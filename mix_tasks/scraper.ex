@@ -9,7 +9,8 @@ defmodule Location.Scraper do
     "MW",
     "FJ",
     "GH",
-    "UG"
+    "UG",
+    "BB"
   ]
 
   def scrape() do
