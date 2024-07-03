@@ -11,6 +11,10 @@ defmodule Location.Scraper do
     "GH",
     "UG",
     "BB",
+    "KE",
+    "US",
+    "ZA",
+    "MM",
     # Anonymous VPN Service is not a country
     "A1"
   ]
