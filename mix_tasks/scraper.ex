@@ -39,8 +39,9 @@ defmodule Location.Scraper do
     IO.puts(IO.ANSI.blue() <> "Fetching " <> url <> IO.ANSI.reset())
     {200, _headers, body} = Location.HTTP.get!(url)
     {:ok, document} = Floki.parse_document(body)
+    content = Floki.find(document, "main#content")
 
-    document
+    content
     |> Floki.find("table.wikitable.sortable")
     |> Enum.flat_map(fn table ->
       rows = Floki.find(table, "tbody tr")
