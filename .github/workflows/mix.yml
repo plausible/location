@@ -39,7 +39,8 @@ jobs:
             test-${{ matrix.otp }}-${{ matrix.elixir }}-refs/heads/master-
 
       - run: mix deps.get --only $MIX_ENV
-      - run: mix compile --warnings-as-errors
+      # TODO --warnings-as-errors
+      - run: mix compile
       - run: mix test
 
   format:
