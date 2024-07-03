@@ -6,20 +6,16 @@ defmodule Location.Subdivision do
   def load() do
     ets = :ets.new(@ets_table, [:named_table])
 
-    translations = File.read!(translations_file()) |> Jason.decode!()
-
     File.read!(source_file())
     |> Jason.decode!()
     |> Map.fetch!("3166-2")
     |> Enum.each(fn entry ->
-      entry = translate_entry(translations, entry)
       :ets.insert(ets, {entry["code"], to_struct(entry)})
     end)
 
     File.read!(restore_source_file())
     |> Jason.decode!()
     |> Enum.each(fn entry ->
-      entry = translate_entry(translations, entry)
       :ets.insert(ets, {entry["code"], to_struct(entry)})
     end)
 
@@ -65,26 +61,12 @@ defmodule Location.Subdivision do
     }
   end
 
-  defp translate_entry(translations, entry) do
-    case Map.get(translations, entry["code"]) do
-      nil ->
-        entry
-
-      translation ->
-        Map.put(entry, "name", translation)
-    end
-  end
-
   defp source_file() do
     Application.app_dir(:location, "priv/iso_3166-2.json")
   end
 
   defp restore_source_file() do
     Application.app_dir(:location, "priv/restore/iso_3166-2.json")
-  end
-
-  defp translations_file() do
-    Application.app_dir(:location, "priv/iso_3166-2.en-translations.json")
   end
 
   defp override_source_file() do

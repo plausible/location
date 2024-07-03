@@ -48,6 +48,7 @@ defmodule Location.MixProject do
     [
       {:jason, "~> 1.3"},
       {:nimble_csv, "~> 1.1"},
+      {:ex_cldr_territories, "~> 2.9", only: [:dev, :test]},
       {:floki, "~> 0.36.0", only: [:dev, :test]},
       {:flow, "~> 1.0", only: [:dev, :test]}
     ]

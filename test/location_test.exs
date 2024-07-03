@@ -77,12 +77,12 @@ defmodule LocationTest do
       assert Location.get_subdivision("JP-21").name == "Gifu"
 
       # MW
-      assert Location.get_subdivision("MW-C").name == "Central Region"
+      assert Location.get_subdivision("MW-C").name == "Central"
       assert Location.get_subdivision("MW-BA").name == "Balaka"
 
       # FJ
       assert Location.get_subdivision("FJ-03").name == "Cakaudrove"
-      assert Location.get_subdivision("FJ-08").name == "Nadroga and Navosa"
+      assert Location.get_subdivision("FJ-08").name == "Nadroga-Navosa"
       assert Location.get_subdivision("FJ-C").name == "Central"
 
       # GH
