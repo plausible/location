@@ -1,0 +1,55 @@
+name: mix
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      MIX_ENV: test
+
+    strategy:
+      matrix:
+        elixir: [1.15, 1.16]
+        otp: [25, 26]
+        include:
+          - elixir: 1.17
+            otp: 27
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: erlef/setup-beam@v1
+        with:
+          elixir-version: ${{ matrix.elixir }}
+          otp-version: ${{ matrix.otp }}
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            deps
+            _build
+          key: test-${{ matrix.otp }}-${{ matrix.elixir }}-${{ github.head_ref || github.ref }}-${{ hashFiles('**/mix.lock') }}
+          restore-keys: |
+            test-${{ matrix.otp }}-${{ matrix.elixir }}-${{ github.head_ref || github.ref }}-
+            test-${{ matrix.otp }}-${{ matrix.elixir }}-refs/heads/master-
+
+      - run: mix deps.get --only $MIX_ENV
+      # TODO --warnings-as-errors
+      - run: mix compile
+      - run: mix test
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: erlef/setup-beam@v1
+        with:
+          elixir-version: 1
+          otp-version: 27
+      - run: elixir -v
+      - run: mix format --check-formatted
