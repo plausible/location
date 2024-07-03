@@ -10,7 +10,9 @@ defmodule Location.Scraper do
     "FJ",
     "GH",
     "UG",
-    "BB"
+    "BB",
+    # Anonymous VPN Service is not a country
+    "A1"
   ]
 
   def scrape() do
@@ -30,44 +32,44 @@ defmodule Location.Scraper do
 
   defp scrape_country(country) do
     url = @base_url <> country.alpha_2
+    IO.puts(IO.ANSI.blue() <> "Fetching " <> url <> IO.ANSI.reset())
     {200, _headers, body} = Location.HTTP.get!(url)
     {:ok, document} = Floki.parse_document(body)
 
-    rows =
-      document
-      |> Floki.find("table.wikitable.sortable")
-      |> Enum.flat_map(fn table ->
-        rows = Floki.find(table, "tbody tr")
+    document
+    |> Floki.find("table.wikitable.sortable")
+    |> Enum.flat_map(fn table ->
+      rows = Floki.find(table, "tbody tr")
 
-        english_name_column =
-          case List.first(rows) do
-            {"tr", _attrs, cells} ->
-              Enum.find_index(cells, fn cell ->
-                text = String.downcase(cell_text(cell))
-                # https://github.com/plausible/analytics/issues/3260
-                if country.alpha_2 == "SE" do
-                  String.starts_with?(text, "subdivision name (sv)")
-                else
-                  String.starts_with?(text, "subdivision name (en)")
-                end
-              end)
+      english_name_column =
+        case List.first(rows) do
+          {"tr", _attrs, cells} ->
+            Enum.find_index(cells, fn cell ->
+              text = String.downcase(cell_text(cell))
+              # https://github.com/plausible/analytics/issues/3260
+              if country.alpha_2 == "SE" do
+                String.starts_with?(text, "subdivision name (sv)")
+              else
+                String.starts_with?(text, "subdivision name (en)")
+              end
+            end)
 
-            _ ->
-              nil
-          end
-
-        if english_name_column do
-          IO.puts(IO.ANSI.green() <> "Scraping " <> country.name <> IO.ANSI.reset())
-
-          Enum.drop(rows, 1)
-          |> Enum.map(fn row -> scrape_row(row, english_name_column) end)
-          |> Enum.uniq_by(fn {code, _name} -> code end)
-          |> Enum.sort_by(fn {code, _name} -> code end)
-        else
-          IO.puts(IO.ANSI.red() <> "Skipping " <> country.name <> IO.ANSI.reset())
-          []
+          _ ->
+            nil
         end
-      end)
+
+      if english_name_column do
+        IO.puts(IO.ANSI.green() <> "Scraping " <> country.name <> IO.ANSI.reset())
+
+        Enum.drop(rows, 1)
+        |> Enum.map(fn row -> scrape_row(row, english_name_column) end)
+        |> Enum.uniq_by(fn {code, _name} -> code end)
+        |> Enum.sort_by(fn {code, _name} -> code end)
+      else
+        IO.puts(IO.ANSI.red() <> "Skipping " <> country.name <> IO.ANSI.reset())
+        []
+      end
+    end)
   end
 
   defp scrape_row({"tr", _attrs, children}, name_column_index) do
