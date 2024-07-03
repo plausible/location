@@ -32,9 +32,12 @@ defmodule Location.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger | extra_applications(Mix.env())]
     ]
   end
+
+  defp extra_applications(env) when env in [:dev, :test], do: [:inets, :ssl]
+  defp extra_applications(_env), do: []
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(env) when env in [:dev, :test], do: ["lib", "mix_tasks"]
@@ -46,7 +49,6 @@ defmodule Location.MixProject do
       {:jason, "~> 1.3"},
       {:nimble_csv, "~> 1.1"},
       {:floki, "~> 0.36.0", only: [:dev, :test]},
-      {:httpoison, "~> 1.8", only: [:dev, :test]},
       {:flow, "~> 1.0", only: [:dev, :test]}
     ]
   end

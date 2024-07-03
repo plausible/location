@@ -27,8 +27,8 @@ defmodule Location.Scraper do
 
   defp scrape_country(country) do
     url = @subdivision_base_url <> country.alpha_2
-    response = HTTPoison.get!(url)
-    {:ok, document} = Floki.parse_document(response.body)
+    {200, _headers, body} = Location.HTTP.get!(url)
+    {:ok, document} = Floki.parse_document(body)
 
     rows =
       Floki.find(document, "table.wikitable.sortable")

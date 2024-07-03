@@ -7,14 +7,10 @@ defmodule Mix.Tasks.UpdateIsoData do
   @subdivisions_dest Application.app_dir(:location, "/priv/iso_3166-2.json")
 
   def run(_) do
-    HTTPoison.start()
-
-    %HTTPoison.Response{status_code: 200, body: countries} = HTTPoison.get!(@countries_src)
+    {200, _headers, countries} = Location.HTTP.get!(@countries_src)
     File.write!(@countries_dest, countries)
 
-    %HTTPoison.Response{status_code: 200, body: new_subdivisions} =
-      HTTPoison.get!(@subdivisions_src)
-
+    {200, _headers, new_subdivisions} = Location.HTTP.get!(@subdivisions_src)
     %{"3166-2" => new_subdivisions} = Jason.decode!(new_subdivisions)
 
     new_subdivisions =
