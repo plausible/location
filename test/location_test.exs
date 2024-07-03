@@ -70,6 +70,25 @@ defmodule LocationTest do
       # PH-MAG was split in two in 2023-11-23: https://en.wikipedia.org/wiki/ISO_3166-2:PH#Changes
       assert Location.get_subdivision("PH-MAG").name == "Maguindanao"
     end
+
+    test "is translated to English" do
+      # JP
+      assert Location.get_subdivision("JP-13").name == "Tokyo"
+      assert Location.get_subdivision("JP-21").name == "Gifu"
+
+      # MW
+      assert Location.get_subdivision("MW-C").name == "Central Region"
+      assert Location.get_subdivision("MW-BA").name == "Balaka"
+
+      # FJ
+      assert Location.get_subdivision("FJ-03").name == "Cakaudrove"
+      assert Location.get_subdivision("FJ-08").name == "Nadroga and Navosa"
+      assert Location.get_subdivision("FJ-C").name == "Central"
+
+      # GH
+      assert Location.get_subdivision("GH-AA").name == "Greater Accra"
+      assert Location.get_subdivision("GH-CP").name == "Central"
+    end
   end
 
   describe "city" do
