@@ -30,6 +30,8 @@ defmodule Mix.Tasks.UpdateGeonameData do
     IO.puts("Writing result to #{@allcountries_dest}")
 
     File.write!(@allcountries_dest, Enum.join(result, "\n"))
+
+    Location.Scraper.write_date_to_version()
   end
 
   defp reduce_chunk(row, result) do

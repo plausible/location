@@ -2,12 +2,17 @@ defmodule Location.Scraper do
   @base_url "https://en.wikipedia.org"
   @subdivision_base_url @base_url <> "/wiki/ISO_3166-2:"
   @translations_dest Application.app_dir(:location, "/priv/iso_3166-2.en-translations.json")
+  @version_file Application.app_dir(:location, "/priv/version")
   @countries_to_skip [
     # For Estonia the local names are better than English ones
     "EE",
     # Source data from salsa-debian already has english translations where applicable
     "JP"
   ]
+
+  def write_date_to_version() do
+    File.write!(@version_file, Date.to_iso8601(Date.utc_today()))
+  end
 
   def scrape() do
     countries = Location.Country.all()
@@ -21,6 +26,8 @@ defmodule Location.Scraper do
       |> Jason.encode_to_iodata!(pretty: true)
 
     File.write!(@translations_dest, res)
+
+    write_date_to_version()
   end
 
   defp scrape_country(%Location.Country{alpha_2: code}) when code in @countries_to_skip, do: nil
