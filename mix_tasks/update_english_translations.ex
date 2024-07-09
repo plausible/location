@@ -88,6 +88,8 @@ defmodule Mix.Tasks.UpdateEnglishTranslations do
       |> Jason.encode_to_iodata!(pretty: true)
 
     File.write!(@translations_dest, json)
+
+    Location.Scraper.write_date_to_version()
   end
 
   manual_code_to_en_name = %{

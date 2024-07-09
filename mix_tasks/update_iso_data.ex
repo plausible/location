@@ -50,5 +50,7 @@ defmodule Mix.Tasks.UpdateIsoData do
 
     new_subdivisions = Jason.encode_to_iodata!(%{"3166-2" => new_subdivisions}, pretty: true)
     File.write!(@subdivisions_dest, new_subdivisions)
+
+    Location.Scraper.write_date_to_version()
   end
 end
