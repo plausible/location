@@ -1,7 +1,7 @@
 defmodule Mix.Tasks.UpdateGeonameData do
   use Mix.Task
 
-  @allcountries_src "https://download.geonames.org/export/dump/allCountries.zip"
+  # @allcountries_src "https://download.geonames.org/export/dump/allCountries.zip"
   @allcountries_dest Application.app_dir(:location, "/priv/geonames.csv")
 
   @doc """
