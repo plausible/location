@@ -21,6 +21,21 @@ defmodule LocationTest do
       assert match.alpha_2 == "EE"
       assert match.name == "Estonia"
     end
+
+    test "&all/0" do
+      countries = Location.Country.all()
+
+      assert length(countries) > 200 and length(countries) < 1_000
+
+      country = Enum.find(countries, &(&1.alpha_2 == "EE"))
+
+      assert country == %Location.Country{
+               alpha_2: "EE",
+               alpha_3: "EST",
+               name: "Estonia",
+               flag: "🇪🇪"
+             }
+    end
   end
 
   describe "subdivision" do
@@ -146,6 +161,21 @@ defmodule LocationTest do
       # LU
       assert Location.get_subdivision("LU-CL").name == "Clervaux"
     end
+
+    test "&all/0" do
+      subdivisions = Location.Subdivision.all()
+
+      assert length(subdivisions) > 1_000 and length(subdivisions) < 10_000
+
+      subdivision = Enum.find(subdivisions, &(&1.code == "EE-79"))
+
+      assert subdivision == %Location.Subdivision{
+               name: "Tartumaa",
+               code: "EE-79",
+               country_code: "EE",
+               type: "County"
+             }
+    end
   end
 
   describe "city" do
@@ -175,6 +205,15 @@ defmodule LocationTest do
       assert city.country_code == "AU"
       assert city.id == 8_349_432
       assert city.name == "Springfield"
+    end
+
+    test "&all/0" do
+      cities = Location.City.all()
+
+      assert length(cities) > 100_000 and length(cities) < 1_000_000
+
+      city = Enum.find(cities, &(&1.id == 588_335))
+      assert city == %Location.City{country_code: "EE", name: "Tartu", id: 588_335}
     end
   end
 end
