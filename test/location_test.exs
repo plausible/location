@@ -134,6 +134,17 @@ defmodule LocationTest do
       # CZ
       assert Location.get_subdivision("CZ-10").name == "Prague"
       assert Location.get_subdivision("CZ-41").name == "Karlovy Vary"
+
+      # FI
+      assert Location.get_subdivision("FI-01").name == "Åland"
+      assert Location.get_subdivision("FI-06").name == "Kanta-Häme"
+      assert Location.get_subdivision("FI-16").name == "Päijät-Häme"
+
+      # CH
+      assert Location.get_subdivision("CH-BE").name == "Bern"
+
+      # LU
+      assert Location.get_subdivision("LU-CL").name == "Clervaux"
     end
   end
 

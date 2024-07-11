@@ -123,6 +123,8 @@ defmodule Mix.Tasks.UpdateEnglishTranslations do
     "KZ-75" => "Almaty City",
     # https://en.wikipedia.org/wiki/ISO_3166-2:FI
     "FI-01" => "Åland",
+    "FI-06" => "Kanta-Häme",
+    "FI-16" => "Päijät-Häme",
     # https://en.wikipedia.org/wiki/ISO_3166-2:FR
     "FR-BL" => "Saint Barts",
     "FR-NC" => "New Caledonia",
