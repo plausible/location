@@ -48,6 +48,11 @@ defmodule Location.City do
     |> Stream.run()
   end
 
+  def all() do
+    :ets.tab2list(@ets_table_by_id)
+    |> Enum.map(fn {id, {name, country_code}} -> to_struct(id, name, country_code) end)
+  end
+
   @doc """
   Finds city by GeoNames ID.
   """

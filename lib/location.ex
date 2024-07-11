@@ -28,4 +28,10 @@ defmodule Location do
     Logger.debug("Loading location database #{inspect(module)} took: #{time}s")
     :ok
   end
+
+  def version() do
+    version_file = Application.app_dir(:location, "priv/version")
+
+    File.read!(version_file)
+  end
 end
