@@ -36,7 +36,7 @@ defmodule Location.MixProject do
     ]
   end
 
-  defp extra_applications(env) when env in [:dev, :test], do: [:inets, :ssl]
+  defp extra_applications(env) when env in [:dev, :test], do: [:inets, :ssl, :xmerl]
   defp extra_applications(_env), do: []
 
   # Specifies which paths to compile per environment.
