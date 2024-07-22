@@ -13,5 +13,5 @@ The data for subdivisions comes primarily from the [debian iso-codes](https://sa
 
 ### Cities
 
-The data for cities comes from the [geonames](http://www.geonames.org/) project. This project has scripts to downlaod the main `allCountries.txt` file. It is then processed to make it smaller
+The data for cities comes from the [geonames](http://www.geonames.org/) project. This project has scripts to download the main `allCountries.txt` file. It is then processed to make it smaller
 (from 1.3GB to about 130MB). Still, the resulting file is quite large so we also provide a city database based on the smaller `cities500.txt` file.
