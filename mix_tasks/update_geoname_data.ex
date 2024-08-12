@@ -1,7 +1,7 @@
 defmodule Mix.Tasks.UpdateGeonameData do
   use Mix.Task
 
-  @allcountries_src "https://download.geonames.org/export/dump/allCountries.zip"
+  # @allcountries_src "https://download.geonames.org/export/dump/allCountries.zip"
   @allcountries_dest Application.app_dir(:location, "/priv/geonames.csv")
 
   @doc """
@@ -30,6 +30,8 @@ defmodule Mix.Tasks.UpdateGeonameData do
     IO.puts("Writing result to #{@allcountries_dest}")
 
     File.write!(@allcountries_dest, Enum.join(result, "\n"))
+
+    Location.Scraper.write_date_to_version()
   end
 
   defp reduce_chunk(row, result) do

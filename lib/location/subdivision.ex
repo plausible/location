@@ -30,6 +30,11 @@ defmodule Location.Subdivision do
     end)
   end
 
+  def all() do
+    :ets.tab2list(@ets_table)
+    |> Enum.map(fn {_, entry} -> entry end)
+  end
+
   def search_subdivision(search_phrase) do
     search_phrase = String.downcase(search_phrase)
 
