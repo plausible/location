@@ -48,7 +48,7 @@ defmodule Location.MixProject do
     [
       {:jason, "~> 1.3"},
       {:nimble_csv, "~> 1.1"},
-      {:floki, "~> 0.36.0", only: [:dev, :test]},
+      {:floki, "~> 0.37.0", only: [:dev, :test]},
       {:flow, "~> 1.0", only: [:dev, :test]}
     ]
   end
