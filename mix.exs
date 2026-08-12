@@ -36,8 +36,8 @@ defmodule Location.MixProject do
     ]
   end
 
-  defp extra_applications(env) when env in [:dev, :test], do: [:inets, :ssl, :xmerl]
-  defp extra_applications(_env), do: []
+  defp extra_applications(env) when env in [:dev, :test], do: [:inets, :ssl, :xmerl,:xlsxir]
+  defp extra_applications(_env), do: [:xlsxir]
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib"]
@@ -46,14 +46,15 @@ defmodule Location.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:jason, "~> 1.3"},
-      {:nimble_csv, "~> 1.2"},
-      {:floki, "~> 0.35.2"},
-      {:tesla, "~> 1.8"},
-      {:hackney, "~> 1.20"},
-      {:flow, "~> 1.2"},
-      {:unzip, "0.11.0"},
-      {:csv, "~> 3.2"}
+      {:jason, ">= 0.0.0"},
+      {:nimble_csv, ">= 0.0.0"},
+      {:floki, ">= 0.0.0"},
+      {:tesla, ">= 0.0.0"},
+      {:hackney, ">= 0.0.0"},
+      {:flow, ">= 0.0.0"},
+      {:unzip, ">= 0.0.0"},
+      {:csv, ">= 0.0.0"},
+      {:xlsxir, ">= 0.0.0"},
     ]
   end
 end
