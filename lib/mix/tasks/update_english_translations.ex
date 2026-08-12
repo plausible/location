@@ -1,5 +1,6 @@
-defmodule Mix.Tasks.UpdateEnglishTranslations do
+defmodule Mix.Tasks.Location.UpdateEnglishTranslations do
   use Mix.Task
+  @shortdoc "Updates english translations for locations"
 
   @cldr_url "https://raw.githubusercontent.com/unicode-org/cldr/main/common/subdivisions/en.xml"
   @translations_dest Application.app_dir(:location, "/priv/iso_3166-2.en-translations.json")

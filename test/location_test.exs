@@ -216,4 +216,12 @@ defmodule LocationTest do
       assert city == %Location.City{country_code: "EE", name: "Tartu", id: 588_335}
     end
   end
+
+  describe "postal code" do
+    test "can look up postal codes for a city" do
+      codes = Location.get_postal_codes("US", "AZ", "Tucson")
+
+      assert Enum.count(codes) == 0
+    end
+  end
 end

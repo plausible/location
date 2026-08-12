@@ -15,3 +15,10 @@ The data for subdivisions comes primarily from the [debian iso-codes](https://sa
 
 The data for cities comes from the [geonames](http://www.geonames.org/) project. This project has scripts to download the main `allCountries.txt` file. It is then processed to make it smaller
 (from 1.3GB to about 130MB). Still, the resulting file is quite large so we also provide a city database based on the smaller `cities500.txt` file.
+
+### Postal Codes
+
+The data for postal codes comes from the [geonames](http://www.geonames.org/) project. This project has scripts to download all or individual postal code files via the --source option.
+
+### Mix Tasks
+one must first refresh the applications task lists by running `mix compile` tasks can then be viewed via `mix help`

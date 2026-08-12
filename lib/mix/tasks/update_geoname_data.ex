@@ -1,15 +1,20 @@
-defmodule Mix.Tasks.UpdateGeonameData do
+defmodule Mix.Tasks.Location.UpdateGeonameData do
   use Mix.Task
-
-  # @allcountries_src "https://download.geonames.org/export/dump/allCountries.zip"
+  @shortdoc "Updates the geonamedata for locations"
+  @allcountries_src "https://download.geonames.org/export/dump/allCountries.zip"
   @allcountries_dest Application.app_dir(:location, "/priv/geonames.csv")
 
   @doc """
   The data source allCountries.txt clocks in at 1.5GB. Expect this to take a while.
   """
   def run(_) do
-    # System.cmd("wget", [@allcountries_src, "-O", "/tmp/allCountries.zip"])
-    # System.cmd("unzip", ["/tmp/allCountries.zip", "-d", "/tmp"])
+    System.cmd("wget", [@allcountries_src, "-O", "/tmp/allCountries.zip"])
+    zip_file = Unzip.LocalFile.open("/tmp/allCountries.zip")
+    {:ok, unzip} = Unzip.new(zip_file)
+
+    Unzip.file_stream!(unzip, "allCountries.txt")
+    |> Stream.into(File.stream!("/tmp/allCountries.txt"))
+    |> Stream.run()
 
     process_geonames_file("/tmp/allCountries.txt")
   end

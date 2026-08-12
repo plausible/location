@@ -4,6 +4,11 @@ defmodule Location.City do
 
   defstruct [:id, :name, :country_code]
 
+  def unload()do
+    :ets.delete(@ets_table_by_id)
+    :ets.delete(@ets_table_by_label)
+  end
+
   def load() do
     @ets_table_by_id =
       :ets.new(@ets_table_by_id, [

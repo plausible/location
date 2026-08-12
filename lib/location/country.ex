@@ -3,6 +3,10 @@ defmodule Location.Country do
 
   defstruct [:alpha_2, :alpha_3, :name, :flag]
 
+  def unload()do
+    :ets.delete(@ets_table)
+  end
+
   def load() do
     ets = :ets.new(@ets_table, [:named_table])
 

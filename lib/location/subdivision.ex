@@ -3,6 +3,10 @@ defmodule Location.Subdivision do
 
   defstruct [:code, :name, :type, :country_code]
 
+  def unload()do
+    :ets.delete(@ets_table)
+  end
+
   def load() do
     ets = :ets.new(@ets_table, [:named_table])
 

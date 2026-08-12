@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="ELIXIR_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/floki" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/flow" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/gen_stage" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/html_entities" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/idna" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/jason" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/mimerl" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/nimble_csv" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/ssl_verify_fun" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/unicode_util_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/floki" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/flow" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/gen_stage" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/html_entities" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/idna" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/jason" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/mimerl" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/nimble_csv" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/ssl_verify_fun" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/unicode_util_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/certifi" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/hackney" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/metrics" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/parse_trans" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/tesla" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/unzip" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/certifi" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/hackney" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/metrics" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/parse_trans" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/tesla" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/unzip" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="jason" level="project" />
+    <orderEntry type="library" name="nimble_csv" level="project" />
+    <orderEntry type="library" name="floki" level="project" />
+    <orderEntry type="library" name="httpoison" level="project" />
+    <orderEntry type="library" name="flow" level="project" />
+    <orderEntry type="library" name="ex_doc" level="project" />
+    <orderEntry type="library" name="hackney" level="project" />
+    <orderEntry type="library" name="mimic" level="project" />
+    <orderEntry type="library" name="httparrot" level="project" />
+    <orderEntry type="library" name="earmark" level="project" />
+    <orderEntry type="library" name="dialyxir" level="project" />
+    <orderEntry type="library" name="gen_stage" level="project" />
+    <orderEntry type="library" name="tesla" level="project" />
+    <orderEntry type="library" name="mime" level="project" />
+    <orderEntry type="library" name="ibrowse" level="project" />
+    <orderEntry type="library" name="gun" level="project" />
+    <orderEntry type="library" name="finch" level="project" />
+    <orderEntry type="library" name="castore" level="project" />
+    <orderEntry type="library" name="mint" level="project" />
+    <orderEntry type="library" name="poison" level="project" />
+    <orderEntry type="library" name="exjsx" level="project" />
+    <orderEntry type="library" name="msgpax" level="project" />
+    <orderEntry type="library" name="fuse" level="project" />
+    <orderEntry type="library" name="telemetry" level="project" />
+    <orderEntry type="library" name="opentelemetry_process_propagator" level="project" />
+    <orderEntry type="library" name="excoveralls" level="project" />
+    <orderEntry type="library" name="mix_test_watch" level="project" />
+    <orderEntry type="library" name="inch_ex" level="project" />
+    <orderEntry type="library" name="cowlib" level="project" />
+    <orderEntry type="library" name="ranch" level="project" />
+    <orderEntry type="library" name="benchee" level="project" />
+    <orderEntry type="library" name="credo" level="project" />
+    <orderEntry type="library" name="html5ever" level="project" />
+    <orderEntry type="library" name="fast_html" level="project" />
+    <orderEntry type="library" name="unzip" level="project" />
+    <orderEntry type="library" name="benchee_html" level="project" />
+    <orderEntry type="library" name="mox" level="project" />
+    <orderEntry type="library" name="csv" level="project" />
+  </component>
+</module>

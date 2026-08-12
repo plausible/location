@@ -1,5 +1,6 @@
-defmodule Mix.Tasks.UpdateIsoData do
+defmodule Mix.Tasks.Location.UpdateIsoData do
   use Mix.Task
+  @shortdoc "Updates the isocodes for locations"
 
   @countries_src "https://salsa.debian.org/iso-codes-team/iso-codes/-/raw/main/data/iso_3166-1.json"
   @subdivisions_src "https://salsa.debian.org/iso-codes-team/iso-codes/-/raw/main/data/iso_3166-2.json"
